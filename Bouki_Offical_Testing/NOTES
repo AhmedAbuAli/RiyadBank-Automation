@@ -1,0 +1,64 @@
+01 - LOGIN
+02 - ADD MONEY - CARD TOP-UP 
+03 - ADD MONEY - LOCAL BANK
+04 - ADD MONEY - INTERNATIONAL BANK
+05 - ADD MONEY - SADAD ID 
+06 - PROFILE SETTINGS - REMOVE ALIAS 
+07 - PROFILE SETTINGS - MANAGE BENFICIARY
+08 - ADD NEW BENFICIARY - BOUKI WALLET BANK BENFICIARY
+09 - ADD NEW BENFICIARY - LOCAL BANK BENFICIARY
+10 - ADD NEW BENFICIARY - INTERNATIONAL BANK BENFICIARY
+11 - ADD NEW BENFICIARY - RIYAD BANK BENFICIARY
+12 - SEND MONEY - BOUKI WALLET 
+13 - SEND MONEY - RIYAD BANK ACCOUNT
+14 - SEND MONEY - OTHER LOCAL BANKS 
+15 - APP SETTING - CHANGE APP LANGUAGE 
+16 - APP SETTING - ENABLE BIO 
+17 - APP SETTING - CHANGE PASSWORD 
+18 - APP SETTING - CHANGE NOTIFICATION LANGUAGE
+19 - APP SETTING - CHANGE MOBILE NUMBER
+20 - WALLET - REQUEST PHYSICAL CARD 
+21 - WALLET - LOCK E-COMMERCE 
+22 - WALLET - LOCK CONTACTLESS 
+23 - WALLET - CHANGE CARD PIN
+24 - WALLET - SHOW WALLET DETAILS
+25 - WALLET - SHOW CARD DETAILS
+26 - WALLET - SHOW CARD PIN 
+27 - WALLET - CHANGE DEBIT LIMIT IN POS 
+28 - LOGOUT
+
+
+
+
+
+
+
+
+
+
+
+=============================== TEMPLETE FOR ANY FUNCTION ============================						
+
+public void Method_Name(String RportName , int RowNumeber) throws IOException, InterruptedException {
+	
+	try {
+
+		Base.Take_SscreenShot(RportName, RportName + "TEST START");
+
+		/* 
+		
+		
+							WRITE CODE HERE 
+				
+																	*/
+																	
+		Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+		Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+		}	
+	} catch (Exception e) {
+		Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+		Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+	}
+	Methods.Back_To_Home_Screen();
+	
+}

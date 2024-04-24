@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="4" failed="9" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-28T03:40:56 AST" name="BOUKI APP" finished-at="2024-03-28T03:44:26 AST" duration-ms="210190">
+    <groups>
+    </groups>
+    <test started-at="2024-03-28T03:40:56 AST" name="Android" finished-at="2024-03-28T03:44:26 AST" duration-ms="210190">
+      <class name="P01_Testcases.Regression">
+        <test-method is-config="true" signature="BeforeSuite()[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:40:56 AST" name="BeforeSuite" finished-at="2024-03-28T03:40:56 AST" duration-ms="141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeSuite -->
+        <test-method is-config="true" signature="BeforeClass(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:40:56 AST" name="BeforeClass" finished-at="2024-03-28T03:41:04 AST" duration-ms="7951" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AhmedM]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Android]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[13]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeClass -->
+        <test-method signature="Add_Money_Card_TopUp()[pri:2, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:41:04 AST" name="Add_Money_Card_TopUp" finished-at="2024-03-28T03:42:04 AST" duration-ms="60538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Money_Card_TopUp -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:41:04 AST" name="BeforeMethod" finished-at="2024-03-28T03:41:04 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Add_Money_Card_TopUp() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Add_Money_Local_Or_International()[pri:3, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:42:04 AST" name="Add_Money_Local_Or_International" finished-at="2024-03-28T03:42:34 AST" duration-ms="30034" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Money_Local_Or_International -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:42:04 AST" name="BeforeMethod" finished-at="2024-03-28T03:42:04 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Add_Money_Local_Or_International() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Add_Money_Sadad_ID()[pri:4, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:42:34 AST" name="Add_Money_Sadad_ID" finished-at="2024-03-28T03:42:55 AST" duration-ms="20165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Add_Money_Sadad_ID -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:42:34 AST" name="BeforeMethod" finished-at="2024-03-28T03:42:34 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Add_Money_Sadad_ID() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Send_Money_Bouki_Wallet()[pri:5, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:42:55 AST" name="Send_Money_Bouki_Wallet" finished-at="2024-03-28T03:44:04 AST" duration-ms="69164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Send_Money_Bouki_Wallet -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:42:55 AST" name="BeforeMethod" finished-at="2024-03-28T03:42:55 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Send_Money_Bouki_Wallet() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Send_Money_Riyad_Bank_Account()[pri:6, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:04 AST" name="Send_Money_Riyad_Bank_Account" finished-at="2024-03-28T03:44:17 AST" duration-ms="13077" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[A session is either terminated or not started
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.SendMoneyScreen.Riyad_Bank_Account(SendMoneyScreen.java:151)
+at P01_Testcases.Regression.Send_Money_Riyad_Bank_Account(Regression.java:62)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Send_Money_Riyad_Bank_Account -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:04 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:04 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Send_Money_Riyad_Bank_Account() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:17 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:17 AST" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Send_Money_Other_Local_Banks() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Send_Money_Other_Local_Banks()[pri:7, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:17 AST" name="Send_Money_Other_Local_Banks" finished-at="2024-03-28T03:44:17 AST" duration-ms="48" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[A session is either terminated or not started
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.SendMoneyScreen.Other_Local_Banks(SendMoneyScreen.java:213)
+at P01_Testcases.Regression.Send_Money_Other_Local_Banks(Regression.java:68)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Send_Money_Other_Local_Banks -->
+        <test-method signature="Wallet_Show_Wallet_Details()[pri:8, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:17 AST" name="Wallet_Show_Wallet_Details" finished-at="2024-03-28T03:44:20 AST" duration-ms="3020" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$4(AppiumCommandExecutor.java:262)
+at java.base/java.util.Optional.orElseGet(Optional.java:364)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.WalletScreen.Show_Wallet_Details(WalletScreen.java:176)
+at P01_Testcases.Regression.Wallet_Show_Wallet_Details(Regression.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wallet_Show_Wallet_Details -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:17 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:17 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Wallet_Show_Wallet_Details() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Wallet_Show_Card_Details()[pri:9, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:20 AST" name="Wallet_Show_Card_Details" finished-at="2024-03-28T03:44:23 AST" duration-ms="3028" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$4(AppiumCommandExecutor.java:262)
+at java.base/java.util.Optional.orElseGet(Optional.java:364)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.WalletScreen.Show_Card_Details(WalletScreen.java:214)
+at P01_Testcases.Regression.Wallet_Show_Card_Details(Regression.java:79)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wallet_Show_Card_Details -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:20 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:20 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Wallet_Show_Card_Details() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:23 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:23 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Wallet_Show_Card_Pin() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Wallet_Show_Card_Pin()[pri:10, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:23 AST" name="Wallet_Show_Card_Pin" finished-at="2024-03-28T03:44:26 AST" duration-ms="3022" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$4(AppiumCommandExecutor.java:262)
+at java.base/java.util.Optional.orElseGet(Optional.java:364)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.WalletScreen.Show_Card_Pin(WalletScreen.java:260)
+at P01_Testcases.Regression.Wallet_Show_Card_Pin(Regression.java:84)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Wallet_Show_Card_Pin -->
+        <test-method signature="Manage_Beneficiaries_Bouki_Wallet_Beneficiaries()[pri:12, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="Manage_Beneficiaries_Bouki_Wallet_Beneficiaries" finished-at="2024-03-28T03:44:26 AST" duration-ms="16" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$4(AppiumCommandExecutor.java:262)
+at java.base/java.util.Optional.orElseGet(Optional.java:364)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.ProfileScreen.Bouki_Wallet_Beneficiaries(ProfileScreen.java:181)
+at P01_Testcases.Regression.Manage_Beneficiaries_Bouki_Wallet_Beneficiaries(Regression.java:89)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manage_Beneficiaries_Bouki_Wallet_Beneficiaries -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:26 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Manage_Beneficiaries_Bouki_Wallet_Beneficiaries() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Manage_Beneficiaries_Riyad_Bank_Beneficiaries()[pri:13, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="Manage_Beneficiaries_Riyad_Bank_Beneficiaries" finished-at="2024-03-28T03:44:26 AST" duration-ms="15" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$4(AppiumCommandExecutor.java:262)
+at java.base/java.util.Optional.orElseGet(Optional.java:364)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.ProfileScreen.Riyad_Bank_Beneficiaries(ProfileScreen.java:256)
+at P01_Testcases.Regression.Manage_Beneficiaries_Riyad_Bank_Beneficiaries(Regression.java:94)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manage_Beneficiaries_Riyad_Bank_Beneficiaries -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:26 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Manage_Beneficiaries_Riyad_Bank_Beneficiaries() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Manage_Beneficiaries_Local_Bank_Beneficiaries()[pri:14, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="Manage_Beneficiaries_Local_Bank_Beneficiaries" finished-at="2024-03-28T03:44:26 AST" duration-ms="16" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$4(AppiumCommandExecutor.java:262)
+at java.base/java.util.Optional.orElseGet(Optional.java:364)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.ProfileScreen.Local_Bank_Beneficiaries(ProfileScreen.java:339)
+at P01_Testcases.Regression.Manage_Beneficiaries_Local_Bank_Beneficiaries(Regression.java:100)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manage_Beneficiaries_Local_Bank_Beneficiaries -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:26 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Manage_Beneficiaries_Local_Bank_Beneficiaries() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method signature="Manage_Beneficiaries_International_Transfer_Beneficiaries()[pri:15, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="Manage_Beneficiaries_International_Transfer_Beneficiaries" finished-at="2024-03-28T03:44:26 AST" duration-ms="0" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Connection refused: no further information
+Build info: version: '4.19.0', revision: '5f9cec8963'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c1f56013-8416-47d0-a3e0-65846b5c7745, screenshot {}]
+Capabilities {appium:appActivity: com.emcrey.bouki.MainActivity, appium:appPackage: com.emcrey.riyadbank.cert, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:clearDeviceLogsOnStart: true, appium:clearSystemFiles: false, appium:databaseEnabled: false, appium:desired: {appActivity: com.emcrey.bouki.MainActivity, appPackage: com.emcrey.riyadbank.cert, autoGrantPermissions: true, automationName: UiAutomator2, clearDeviceLogsOnStart: true, clearSystemFiles: false, deviceName: AhmedM, ignoreHiddenApiPolicyError: true, noReset: true, noSign: true, platformName: ANDROID, platformVersion: 13, skipServerInstallation: false, skipUnlock: true, systemPort: 8200}, appium:deviceApiLevel: 33, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2159, appium:deviceName: 3468a9a9, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: 3468a9a9, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: true, appium:noSign: true, appium:pixelRatio: 3, appium:platformVersion: 13, appium:skipServerInstallation: false, appium:skipUnlock: true, appium:statBarHeight: 107, appium:systemPort: 8200, appium:takesScreenshot: true, appium:viewportRect: {height: 2186, left: 0, top: 107, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c1f56013-8416-47d0-a3e0-65846b5c7745
+at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$4(AppiumCommandExecutor.java:262)
+at java.base/java.util.Optional.orElseGet(Optional.java:364)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:261)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:675)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:313)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:325)
+at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:322)
+at P01_Base.Base.Take_SscreenShot_Fail(Base.java:112)
+at P03_Screens.ProfileScreen.International_Transfer_Beneficiaries(ProfileScreen.java:440)
+at P01_Testcases.Regression.Manage_Beneficiaries_International_Transfer_Beneficiaries(Regression.java:105)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.net.ConnectException: Connection refused: no further information
+at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Manage_Beneficiaries_International_Transfer_Beneficiaries -->
+        <test-method is-config="true" signature="BeforeMethod(java.lang.reflect.Method)[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="BeforeMethod" finished-at="2024-03-28T03:44:26 AST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void P01_Testcases.Regression.Manage_Beneficiaries_International_Transfer_Beneficiaries() throws java.io.IOException,java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeforeMethod -->
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:P01_Testcases.Regression@59402b8f]" started-at="2024-03-28T03:44:26 AST" name="AfterSuite" finished-at="2024-03-28T03:44:29 AST" duration-ms="2373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterSuite -->
+      </class> <!-- P01_Testcases.Regression -->
+    </test> <!-- Android -->
+  </suite> <!-- BOUKI APP -->
+</testng-results>
