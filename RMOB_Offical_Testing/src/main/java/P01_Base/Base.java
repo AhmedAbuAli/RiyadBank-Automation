@@ -67,8 +67,12 @@ public class Base {
 		caps.setCapability("newCommandTimeout", 120000);
 		caps.setCapability("automationName", "UiAutomator2");
 		
-	    driver  = new AndroidDriver(new URL(Prop.getProperty("AppiumServer")),caps);   
-	    
+	    driver  = new AndroidDriver(new URL(Prop.getProperty("AppiumServer")),caps); 
+		
+		System.out.println("APP STARTED SUCCESSFULLY...");
+		System.out.println("===============================================");
+
+		ClearFolder();
 	    }
 	
 	// TO BE ABLE TO TAKE A SCREENSHOT FROM ANYWHERE AND ANY SCREEN AT ANY TIME ( FAIL )
@@ -91,12 +95,12 @@ public class Base {
 		// EXTENSTION OF THE SCREENSHOT
 		File Image = driver.getScreenshotAs(OutputType.FILE);
 		// NAME OF THE SCREENSHOT
-		FileUtils.copyFile(Image, new File ("Snapshots/"+method+Integer.toString(c)+".jpg"));
+		FileUtils.copyFile(Image, new File ("Snapshots/"+method+".jpg"));
 		// PATH OF THE SCREENSHOT 
-		String ImagePath = ".." + File.separator +"Snapshots/"+method+Integer.toString(c)+".jpg"; 
+		String ImagePath = ".." + File.separator +"Snapshots/"+method+".jpg"; 
 		// TO ADD THE SCREENSHOT TO THE REPORT 
 		Logger.log(LogStatus.PASS, Status, Logger.addScreenCapture(ImagePath));
-		c++ ;
+
 	}
 	
 	// GET THE NAME BEFORE EACH METHOD YOU TEST 
@@ -135,6 +139,20 @@ public class Base {
 		Logger.log(LogStatus.SKIP, "METHOD IS SKIPPED OR NOT APPLICABLE");
 
 	}
+
+	// CLEAR THE SNAPSHOT FOLDER BEFORE EACH RUN
+	public static void ClearFolder () {
+        File folder = new File("C:/Users/DELL/eclipse-workspace/RMOB_Offical_Testing/Snapshots");
+
+        try {
+            FileUtils.cleanDirectory(folder);
+            System.out.println("SNAPSHOTS FOLDER CLEARED SUCCESSFULLY...");
+			System.out.println("===============================================");
+
+        } catch (IOException e) {
+            System.err.println("SNAPSHOTS ALREADY EMPTY...");
+        }
+    }
 	
 
 }

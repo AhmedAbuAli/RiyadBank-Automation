@@ -31,8 +31,6 @@ public class LoginScreen extends Base {
 	Data Data = new Data();
 	String[] options = {"77830909","67005851", "12411864","18735117","12296796","64488507","86661664", "99333996", "61251006" , "78562380" , "50131511"};
 
-	
-	
 	public void Login(String RportName , int RowNumeber) throws IOException, InterruptedException  {
 		
 		try {
@@ -48,13 +46,11 @@ public class LoginScreen extends Base {
 			driver.findElement(By.xpath(INPUT_Password)).sendKeys("uat123@123");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_Login)).click();
 			
 			Thread.sleep(15000);
 			
 			Methods.Check_Alerts();
-			
 	
 		//	Methods.Get_OTP();
 		
@@ -64,6 +60,9 @@ public class LoginScreen extends Base {
 			} catch (Exception e) {
 				// DO NOTHING
 			}
+
+			Thread.sleep(30000);
+			Base.Take_SscreenShot(RportName , "");
 						
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );		
 			

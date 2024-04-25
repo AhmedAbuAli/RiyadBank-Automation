@@ -157,18 +157,15 @@ public class CommenMethods extends Base {
 		
 		try {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot("SIDE BAR" , "");
 			driver.findElement(By.xpath(BUTTON_SideBar2)).click();
 		} catch (Exception e) {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot("SIDE BAR" , "");
 			driver.findElement(By.xpath(BUTTON_SideBar)).click();		}
 
 	}
 
 	public void MW_PopUps () throws IOException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		Base.Take_SscreenShot("POP-UP" , "");
 		driver.findElement(By.xpath(BUTTON_OK)).click();
 		
 	}
@@ -179,7 +176,6 @@ public class CommenMethods extends Base {
 		for (int i = 0; i < 4; i++) {
 			action_clickOnPosition(405 , 2252);
 		}
-		Base.Take_SscreenShot("OTP" , "");
 		driver.findElement(By.xpath(BUTTON_Continue)).click();
 	}
 

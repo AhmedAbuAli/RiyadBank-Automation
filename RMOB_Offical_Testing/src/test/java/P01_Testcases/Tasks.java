@@ -55,8 +55,8 @@ public class Tasks extends Base {
 	
 	@Test 
 	(priority = 1)
-	public void ADD_NEW_BENFICIARY_LOCAL_BENFICIARY() throws IOException, InterruptedException   {
-		AddNewBenf.Local_Bank_Benf("ADD NEW BENFICIARY - LOCAL BANK BENFICIARY", 41);
+	public void START_AND_LOGIN() throws IOException, InterruptedException   {
+		Login.Login("Login" , 3);
 	}
 
 
