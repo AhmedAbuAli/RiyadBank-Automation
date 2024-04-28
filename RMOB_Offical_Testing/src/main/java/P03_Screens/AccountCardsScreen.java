@@ -1,9 +1,7 @@
 package P03_Screens;
 import java.io.IOException;
 import java.time.Duration;
-
 import javax.swing.JOptionPane;
-
 import org.openqa.selenium.By;
 import P01_Base.Base;
 import P04_Utils.Data;
@@ -42,7 +40,6 @@ public class AccountCardsScreen extends Base {
 	String BUTTON_Continue2 = "//android.widget.Button[@text = 'Continue arrow round-forward']";
 	String BUTTON_EditLimitAmmount = "//android.widget.TextView[@text='20,000']";
 	String BUTTON_EditLimitAmmount2 = "//android.widget.TextView[@text='30,000']";
-
 	String BUTTON_EditLimit = "//android.widget.Button[@text = 'Edit Limit']";
 	String uiSelector = "new UiSelector().textMatches(\"" +"Total Unavailable Funds"+ "\")";
 	String command = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector + ");";
@@ -81,7 +78,6 @@ public class AccountCardsScreen extends Base {
 	String BUTTON_OK = "//android.widget.Button[@text = 'OK' ]";
 	String BUTTON_StopTemporary = "//android.widget.Button[@text='Stop Temporary']";
 	
-	
 	// GENERAL VARIABLES
 	CommenMethods Methods = new CommenMethods();
 	Base Base = new Base();	
@@ -97,47 +93,41 @@ public class AccountCardsScreen extends Base {
 			
 			Methods.Open_Side_Bar();
 			
-			Base.Take_SscreenShot(RportName, "CHECK ACCOUNT DETAILS TEST START");
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_AccountsCards)).click();
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_Accounts)).click();
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE ACCOUNT YOU WANT TO CHECK THEN PRESS OK");
 			
 	        try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				driver.findElement(By.xpath(BUTTON_EyeIcon)).click();
 				Thread.sleep(6000);
-				Base.Take_SscreenShot(RportName , "");
+				
 			} catch (Exception e) {
 				// DO NOTHING
 			}
 
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Details)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(AppiumBy.androidUIAutomator(command));
-			Base.Take_SscreenShot(RportName , "");
-			
-			Methods.Back_To_Home_Screen();
-			
+						
 			Base.Take_SscreenShot(RportName , "CHECK ACCOUNT DETAILS TEST IS PASSED");
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 
 		} catch (Exception e) {
+
 			Base.Take_SscreenShot_Fail(RportName , " ERROR IN CHECK ACCOUNT DETAILS TEST" + '\n' +e);
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
-			Methods.Back_To_Home_Screen();
-
 		}
+
+		Methods.Back_To_Home_Screen();
+
 	}
 	
 	public void Issue_Credit_Card(String RportName , int RowNumeber) throws IOException, InterruptedException {
@@ -245,82 +235,85 @@ public class AccountCardsScreen extends Base {
 		
 		Methods.Open_Side_Bar();
 		
-		Base.Take_SscreenShot(Method_Name1, "OPEN DEBIT CARD");
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_AccountsCards)).click();
-		Base.Take_SscreenShot(Method_Name1 , "");
-
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_DebitCards)).click();
-		Base.Take_SscreenShot(Method_Name1 , "");
 
 	}
 	
 	public void Edit_POS_Limit(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
+
 			try {
+
 				Open_Dedit_Card();
+
 			} catch (Exception e) {
+
 				// DO NOTHING
+
 			}
-			
-			Base.Take_SscreenShot(RportName, "EDIT DEBIT POS LIMIT TEST START");
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO CHANGE THE DEBIT POS LIMIT FOR THEN PRESS OK");
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_EditLimit)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				driver.findElement(By.xpath(BUTTON_EditLimitAmmount)).click();
-				Base.Take_SscreenShot(RportName , "");
+				
 			} catch (Exception e) {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				driver.findElement(By.xpath(BUTTON_EditLimitAmmount2)).click();
-				Base.Take_SscreenShot(RportName , "");
+
 			}
 			
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Continue)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_ChangeLimit)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.Get_OTP();
 			
 			try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				driver.findElement(By.xpath(BUTTON_Continue2)).click();
-				Base.Take_SscreenShot(RportName , "");
+
 			} catch (Exception e) {
+
 				// DO NOTHING
+			
 			}
+
+			Thread.sleep(3000);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_BankToDetails)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
+
 			Base.Take_SscreenShot(RportName , "EDIT DEBIT POS LIMIT TEST IS PASSED");
-			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 			
+			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 			Methods.Back_To_Home_Screen();
 			
 			driver.navigate().back();
 
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName , " ERROR IN EDIT DEBIT POS LIMIT TEST" + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
 			Methods.Back_To_Home_Screen();
 
 		}
@@ -386,31 +379,33 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Dedit_Card();
 
 			} catch (Exception e) {
+
 				// DO NOTHING 
+			
 			}
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO ACTIVE OR DEACTIVE CONTACLESS FOR THEN PRESS OK");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath("("+BUTTON_Edit+") [2]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-				Base.Take_SscreenShot(RportName , "");
 				driver.findElement(By.xpath(BUTTON_Deactivate)).click();
+
 			} catch (Exception e) {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-				Base.Take_SscreenShot(RportName , "");
 				driver.findElement(By.xpath(BUTTON_Activate)).click();
 			}
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_BankToDetails)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Base.Take_SscreenShot(RportName , "DEACTIVE & ACTIVE ONLINE PURCHASING TEST IS PASSED");
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
@@ -418,6 +413,7 @@ public class AccountCardsScreen extends Base {
 			
 			
 		} catch (Exception e) {
+
 			Base.Take_SscreenShot_Fail(RportName , " ERROR IN DEACTIVE & ACTIVE ONLINE PURCHASING TEST" + '\n' +e);
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 			Methods.Back_To_Home_Screen();

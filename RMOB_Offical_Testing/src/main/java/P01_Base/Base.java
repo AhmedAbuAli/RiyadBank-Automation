@@ -1,5 +1,5 @@
 package P01_Base;
-
+import P04_Utils.Data ;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -31,6 +31,8 @@ public class Base {
 	protected Properties Prop ;
 	protected File PropFile ;
 	protected File App ;
+	static Data Data = new Data();
+
 	int c = 0 ;
 	int c2 = 1 ; 
 	
@@ -145,14 +147,14 @@ public class Base {
         File folder = new File("C:/Users/DELL/eclipse-workspace/RMOB_Offical_Testing/Snapshots");
 
         try {
+
             FileUtils.cleanDirectory(folder);
             System.out.println("SNAPSHOTS FOLDER CLEARED SUCCESSFULLY...");
 			System.out.println("===============================================");
 
         } catch (IOException e) {
-            System.err.println("SNAPSHOTS ALREADY EMPTY...");
+            System.err.println("SNAPSHOTS FOLDER ALREADY EMPTY...");
         }
     }
-	
 
 }
