@@ -44,6 +44,7 @@ public class AccountCardsScreen extends Base {
 	String uiSelector = "new UiSelector().textMatches(\"" +"Total Unavailable Funds"+ "\")";
 	String command = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector + ");";
 	String uiSelector2 = "new UiSelector().textMatches(\"" +"Cancel Card"+ "\")";
+	String BUTTON_Cancel = "//android.widget.Button[@text='Cancel']";
 	String command2 = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector2 + ");";
 	String uiSelector3 = "new UiSelector().textMatches(\"" +"Continue arrow round-forward"+ "\")";
 	String command3 = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector3 + ");";
@@ -77,6 +78,8 @@ public class AccountCardsScreen extends Base {
 	String BUTTON_StopCard = "//android.widget.Button[@text = 'Stop Card arrow round-forward']";
 	String BUTTON_OK = "//android.widget.Button[@text = 'OK' ]";
 	String BUTTON_StopTemporary = "//android.widget.Button[@text='Stop Temporary']";
+	String RADIO_PayOtherAmount = "//android.widget.RadioButton[@text='Pay Other Amount']";
+
 	
 	// GENERAL VARIABLES
 	CommenMethods Methods = new CommenMethods();
@@ -324,49 +327,58 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Dedit_Card();
 
 			} catch (Exception e) {
+
 				// DO NOTHING
+
 			}
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO ACTIVE OR DEACTIVE ONLINE PURCHASING FOR THEN PRESS OK");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath("("+BUTTON_Edit+") [1]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-				Base.Take_SscreenShot(RportName , "");
 				driver.findElement(By.xpath(BUTTON_Deactivate)).click();
+
 			} catch (Exception e) {
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_Activate)).click();
 			STATUS = "ACTIVE" ; 
+
 			}
 			
 			Methods.Get_OTP();
 			
 			try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				driver.findElement(By.xpath(BUTTON_Continue2)).click();
-				Base.Take_SscreenShot(RportName , "");
+
 			} catch (Exception e) {
+
 				// DO NOTHING
+
 			}
+			
+			Thread.sleep(5000);
+
+			Base.Take_SscreenShot(RportName , "");
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_BankToDetails)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
-			Base.Take_SscreenShot(Method_Name3 , "DEACTIVE & ACTIVE ONLINE PURCHASING TEST IS PASSED");
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 			Methods.Back_To_Home_Screen();
 
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName , " ERROR IN DEACTIVE & ACTIVE ONLINE PURCHASING TEST" + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 			Methods.Back_To_Home_Screen();
 
@@ -425,44 +437,34 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Dedit_Card();
 
 			} catch (Exception e) {
+				
 				// DO NOTHING
 			}
 			
-	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO CHECK THEN PRESS OK");
+	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD TO SHOW THE PIN THEN PRESS OK");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_ShowPin)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
+				
 			Thread.sleep(6000);
+
 			Base.Take_SscreenShot(RportName , "");
-			
-			Thread.sleep(6000);
-			Base.Take_SscreenShot(RportName , "");
-			
-			Thread.sleep(6000);
-			Base.Take_SscreenShot(RportName , "");
-			
-			Thread.sleep(6000);
-			Base.Take_SscreenShot(RportName , "");
-			
-			Thread.sleep(6000);
+
 			Methods.action_clickOnPosition(540, 2360);
 			Methods.action_clickOnPosition(540, 2360);
+			
 			Thread.sleep(6000);
 
-
-
-			Base.Take_SscreenShot(RportName , "SHOW CARD PIN TEST IS PASSED");
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 			Methods.Back_To_Home_Screen();
 			
 			
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName , " ERROR IN SHOW CARD PIN TEST" + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 			Methods.Back_To_Home_Screen();
 
@@ -519,17 +521,13 @@ public class AccountCardsScreen extends Base {
 		Thread.sleep(6000);
 		
 		Methods.Open_Side_Bar();
-		
-		Base.Take_SscreenShot(Method_Name2, "OPEN CREDIT CARD");
-		
+				
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_AccountsCards)).click();
-		Base.Take_SscreenShot(Method_Name2 , "");
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_CreditCards)).click();
 		Thread.sleep(10000);
-		Base.Take_SscreenShot(Method_Name2 , "");	
 	}
 	
 	public void Check_Credit_Card_Details(String RportName , int RowNumeber) throws IOException, InterruptedException {
@@ -537,30 +535,29 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Credit_Card();
+
 			} catch (Exception e) {
+
 				// DO NOTHING
 			}
 			
-		Base.Take_SscreenShot(RportName , "CHECK CREDIT CARD DETAILS TEST START");
 		
         JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO CHECK THEN PRESS OK");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_Details)).click();
-		Base.Take_SscreenShot(RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(AppiumBy.androidUIAutomator(command2));
-		Base.Take_SscreenShot(RportName , "");
 		
-		Base.Take_SscreenShot(RportName , "CHECK CREDIT CARD DETAILS TEST IS PASSED");
+		Base.Take_SscreenShot(RportName , "");
 		Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 		Methods.Back_To_Home_Screen();
 
-		}
-		catch (Exception e) {
-		Base.Take_SscreenShot_Fail(RportName , " ERROR CHECK CREDIT CARD DETAILS TEST" + '\n' +e);
+		}catch (Exception e) {
+
 		Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 		Methods.Back_To_Home_Screen();
 
@@ -573,65 +570,86 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Credit_Card();
+
 			} catch (Exception e) {
-				// TODO: handle exception
+
+				// DO NOTHING
+			
 			}
 			
-			Base.Take_SscreenShot(RportName,  RportName+ " TEST START");
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO CHECK THEN PRESS OK");
 			
 			Methods.action_clickOnPosition(215, 880);
 			Methods.action_clickOnPosition(215, 880);
 
+			Thread.sleep(5000);
+
+			JOptionPane.showMessageDialog(null, "Please confirm that the account has enough balance , if not please change manually ");
 			
-			Base.Take_SscreenShot(RportName , "");
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.findElement(By.xpath(RADIO_PayOtherAmount)).click();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(INPUT)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(INPUT)).sendKeys("10");
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.navigate().back();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Continue2)).click();
-			Base.Take_SscreenShot(RportName , "");
 						
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Pay)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
 
 			Methods.Get_OTP();
 			
 			try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 				driver.findElement(By.xpath(BUTTON_Continue2)).click();
-				Base.Take_SscreenShot(RportName , "");
+
+				Thread.sleep(3000);
+
+				
+
+				try {
+
+					Methods.MW_PopUps();
+
+					driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+					driver.findElement(By.xpath(BUTTON_Cancel)).click();
+
+					Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+					
+					Thread.sleep(3000);
+				
+				} catch (Exception e) {
+					
+					Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+					
+					Base.Take_SscreenShot(RportName ,  RportName + "");
+				
+				}
+
 			} catch (Exception e) {
-				// TODO: handle exception
+
+				// DO NOTHING
+
 			}
 	
-			try {
-				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST");
-				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
-			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + "TEST IS PASSED");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			}			
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST" + '\n' +e);
+
+			Methods.MW_PopUps();
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 
 		}
-		Methods.Back_To_Home_Screen();
 
+		Methods.Back_To_Home_Screen();
 
 	}
 
@@ -640,9 +658,13 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Credit_Card();
+
 			} catch (Exception e) {
-				// TODO: handle exception
+
+				// DO NOTHING
+
 			}
 
 			Base.Take_SscreenShot(RportName, RportName + "TEST START");
@@ -652,38 +674,41 @@ public class AccountCardsScreen extends Base {
 			Methods.action_clickOnPosition(545, 860);
 			
 			Thread.sleep(10000);
+
+			JOptionPane.showMessageDialog(null, "Please confirm that the account has enough balance , if not please change manually ");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(INPUT_Amount)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(INPUT_Amount)).sendKeys("20");
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.action_clickOnPosition(950, 2260);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Continue2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Transfer)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST");
 				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
 			} catch (Exception e) {
+
 				Base.Take_SscreenShot(RportName ,  RportName + "TEST IS PASSED");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			}			
+			}
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST" + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 
+
 		}
+
 		Methods.Back_To_Home_Screen();
 
 	}
@@ -767,52 +792,53 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Multi_Currency_Card();
+
 			} catch (Exception e) {
-				// TODO: handle exception
+
+				// DO NOTHNG	
+
 			}
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Currency)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
+
 			Thread.sleep(5000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_LoadMoney)).click();
-			Base.Take_SscreenShot(RportName , "");
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(VIEW_AmountFrame)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(INPUT_Amount)).sendKeys("20");
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.action_clickOnPosition(950, 2260);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Continue2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_HomePage)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST");
 				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + "TEST IS PASSED");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST" + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
 		}
 		
 	}
@@ -822,29 +848,35 @@ public class AccountCardsScreen extends Base {
 		try {
 
 			try {
-				Open_Multi_Currency_Card();
-			} catch (Exception e) {
-				// DO NOTHING
-			}
-			
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-			driver.findElement(By.xpath(BUTTON_Details)).click();
-			Base.Take_SscreenShot(RportName , "");
 
-			try {
-				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST");
-				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+				Open_Multi_Currency_Card();
+
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+				driver.findElement(By.xpath(BUTTON_Details)).click();
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + "TEST IS PASSED");
+
+				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
+			}
+						
+			try {
+
+				Methods.MW_PopUps();
+				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
+			} catch (Exception e) {
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST" + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
 		}
+
 		Methods.Back_To_Home_Screen();
 		
 	}
@@ -857,17 +889,14 @@ public class AccountCardsScreen extends Base {
 		Thread.sleep(6000);
 		
 		Methods.Open_Side_Bar();
-		
-		Base.Take_SscreenShot(Method_Name4, "OPEN CREDIT CARD");
-		
+				
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_AccountsCards)).click();
-		Base.Take_SscreenShot(Method_Name4 , "");
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_WazinAccounts)).click();
 		Thread.sleep(10000);
-		Base.Take_SscreenShot(Method_Name4, "");	
+		
 	}
 	
 	public void Check_Wazen_Accounts_Details(String RportName , int RowNumeber) throws IOException, InterruptedException {
@@ -908,13 +937,17 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Wazin_Accounts();
+
 			} catch (Exception e) {
+
+				// DO NOTHING
+
 			}
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
 			
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 			
 			Methods.action_clickOnPosition(550, 850);
 			Methods.action_clickOnPosition(550, 850);
@@ -923,20 +956,25 @@ public class AccountCardsScreen extends Base {
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_OK)).click();
+
 			Thread.sleep(2000);
-			Base.Take_SscreenShot(RportName , "");
 				
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 		}
 		
 	}
@@ -950,16 +988,13 @@ public class AccountCardsScreen extends Base {
 		
 		Methods.Open_Side_Bar();
 		
-		Base.Take_SscreenShot(Method_Name5, "OPEN CREDIT CARD");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_AccountsCards)).click();
-		Base.Take_SscreenShot(Method_Name5 , "");
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_NetWorthStatment)).click();
 		Thread.sleep(10000);
-		Base.Take_SscreenShot(Method_Name5, "");	
 	}
 	
 	public void Chcek_Net_Worth_Statment(String RportName , int RowNumeber) throws IOException, InterruptedException {
@@ -967,37 +1002,42 @@ public class AccountCardsScreen extends Base {
 		try {
 			
 			try {
+
 				Open_Net_Worth_Statment();	
+
 			} catch (Exception e) {
+
 				// DO NOTHING
+
 			}
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_PieChart)).click();
 			Thread.sleep(2000);
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_BarChart)).click();
 			Thread.sleep(2000);
-			Base.Take_SscreenShot(RportName , "");
-			
+
+			driver.navigate().back();
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST");
 				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+				
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED");
+
+				Base.Take_SscreenShot(RportName ,  RportName + " ");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			}	
+
+			}
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  " TEST" + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 		}
-		Methods.Back_To_Home_Screen();
 		
 	}
 	// ============================================================================

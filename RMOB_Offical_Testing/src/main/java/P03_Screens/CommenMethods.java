@@ -103,8 +103,6 @@ public class CommenMethods extends Base {
         return selectedOption;
     }
 	
-	
-
 	public void Back_To_Home_Screen() throws IOException, InterruptedException {
 		
 		try {
@@ -180,55 +178,49 @@ public class CommenMethods extends Base {
 	}
 
 	public void Get_OTP() throws InterruptedException {
-		
+
 		try {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 			driver.findElement(By.xpath(BUTTON_PrimaryMobile)).click();
 		} catch (Exception e) {
 			// DO NOTHING 
 		}
-		
-        String OTP = JOptionPane.showInputDialog(null, "Please enter OTP and press ok");
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		driver.findElement(By.xpath(INPUT_OTP2)).click();
-		
-        String[] Digits = OTP.split("");;
-        
-        for (String digit : Digits) {
-        	
-        	if (digit.equals("0")) {
-                driver.pressKey(keyEvent0);
-        	}
-        	else if (digit.equals("1")) {
-                driver.pressKey(keyEvent1);
+	
+		String OTP = JOptionPane.showInputDialog(null, "Please enter OTP and press OK or Cancel");
+	
+		if (OTP != null) {
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.findElement(By.xpath(INPUT_OTP2)).click();
+	
+			String[] Digits = OTP.split("");
+	
+			for (String digit : Digits) {
+				if (digit.equals("0")) {
+					driver.pressKey(keyEvent0);
+				} else if (digit.equals("1")) {
+					driver.pressKey(keyEvent1);
+				} else if (digit.equals("2")) {
+					driver.pressKey(keyEvent2);
+				} else if (digit.equals("3")) {
+					driver.pressKey(keyEvent3);
+				} else if (digit.equals("4")) {
+					driver.pressKey(keyEvent4);
+				} else if (digit.equals("5")) {
+					driver.pressKey(keyEvent5);
+				} else if (digit.equals("6")) {
+					driver.pressKey(keyEvent6);
+				} else if (digit.equals("7")) {
+					driver.pressKey(keyEvent7);
+				} else if (digit.equals("8")) {
+					driver.pressKey(keyEvent8);
+				} else if (digit.equals("9")) {
+					driver.pressKey(keyEvent9);
+				}
 			}
-        	else if (digit.equals("2")) {
-                driver.pressKey(keyEvent2);
-			}
-        	else if (digit.equals("3")) {
-                driver.pressKey(keyEvent3);
-			}
-        	else if (digit.equals("4")) {
-                driver.pressKey(keyEvent4);
-			}
-        	else if (digit.equals("5")) {
-                driver.pressKey(keyEvent5);
-			}
-        	else if (digit.equals("6")) {
-                driver.pressKey(keyEvent6);
-			}
-        	else if (digit.equals("7")) {
-                driver.pressKey(keyEvent7);
-			}
-        	else if (digit.equals("8")) {
-                driver.pressKey(keyEvent8);
-			}
-        	else if (digit.equals("9")) {
-                driver.pressKey(keyEvent9);
-			}
-            
-        }
+		} else {
+			// User clicked "Cancel"
+			// Handle cancellation logic here
+		}
 	
 		try {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
@@ -303,9 +295,6 @@ public class CommenMethods extends Base {
 
 		    driver.perform(Collections.singletonList(sequence));
 	}
-	
-	
-	
 	}
 
 	
