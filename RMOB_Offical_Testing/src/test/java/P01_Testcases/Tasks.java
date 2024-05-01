@@ -49,14 +49,14 @@ public class Tasks extends Base {
 	LoginScreen Login =  new LoginScreen();
 	Base Base = new Base();
 	Data Data = new Data();
-	/*
+
 	@Test 
 	(priority = 1)
 	public void START_AND_LOGIN() throws IOException, InterruptedException   {
 
 		Login.Login("Login" , 3);
 	}
-
+	/*
 	@Test 
 	(priority = 2)
 	public void ACCOUNTS_AND_CARDS_CHECK_ACCOUNT_DETAILS() throws IOException, InterruptedException   {
@@ -144,7 +144,7 @@ public class Tasks extends Base {
 		Account.Wazen_Accounts_Pause_Resume("Pause or resume wazin account", 14);
 
 	}
-	*/
+
 	@Test 
 	(priority = 13)
 	public void ACCOUNTS_AND_CARDS_NET_WORTH_STATMENET_CHECK_CHARTS() throws IOException, InterruptedException   {
@@ -153,5 +153,32 @@ public class Tasks extends Base {
 		
 	}
 
+	@Test 
+	(priority = 14)
+	public void ACCOUNTS_AND_CARDS_WAZEN_ACCOUNT_CHECK_DETAILS() throws IOException, InterruptedException   {
+
+		Account.Check_Wazen_Accounts_Details("Check wazin account details ", 16);
+
+	}
+
+	@Test 
+	(priority = 15)
+	public void MONEY_TRANSFER_BTWEEN_ACCOUNTS() throws IOException, InterruptedException   {
+		MoneyTransfer.Between_My_Accounts("Between my account transfer", 17);
+	}
+
+	@Test 
+	(priority = 16)
+	public void MONEY_TRANSFER_WITHIN_RIYAD_BANK() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Within_Riyad_Bank("Within riyad bank trnasfer", 18);
+
+	}
+	*/
+	@Test 
+	(priority = 17)
+	public void MONEY_TRANSFER_LOCAL_TRANSFER() throws IOException, InterruptedException   {
+		MoneyTransfer.Local_Transfer("Local transfer", 19);
+	}
 
 }

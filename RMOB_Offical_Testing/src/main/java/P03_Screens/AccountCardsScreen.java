@@ -904,31 +904,44 @@ public class AccountCardsScreen extends Base {
 		try {
 
 			try {
+
 				Open_Wazin_Accounts();
+
 			} catch (Exception e) {
+
 				// DO NOTHING
+
 			}
 			
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-			driver.findElement(By.xpath(BUTTON_Details)).click();
-			Thread.sleep(2000);
-			Base.Take_SscreenShot(RportName , "");
+			Thread.sleep(20000);
 
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+				driver.findElement(By.xpath(BUTTON_Details)).click();
+
+				Thread.sleep(2000);
+
+				Base.Take_SscreenShot(RportName , "");
+
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
+				driver.navigate().back();
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 		}
-		Methods.Back_To_Home_Screen();
+
+
 		
 	}
 	
@@ -1019,6 +1032,8 @@ public class AccountCardsScreen extends Base {
 			driver.findElement(By.xpath(BUTTON_BarChart)).click();
 			Thread.sleep(2000);
 
+			Base.Take_SscreenShot(RportName ,  RportName + " ");
+
 			driver.navigate().back();
 			
 			try {
@@ -1029,7 +1044,6 @@ public class AccountCardsScreen extends Base {
 
 			} catch (Exception e) {
 
-				Base.Take_SscreenShot(RportName ,  RportName + " ");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 
 			}
