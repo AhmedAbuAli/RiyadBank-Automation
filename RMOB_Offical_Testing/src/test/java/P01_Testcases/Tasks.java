@@ -174,11 +174,89 @@ public class Tasks extends Base {
 		MoneyTransfer.Within_Riyad_Bank("Within riyad bank trnasfer", 18);
 
 	}
-	*/
+
 	@Test 
 	(priority = 17)
 	public void MONEY_TRANSFER_LOCAL_TRANSFER() throws IOException, InterruptedException   {
+
 		MoneyTransfer.Local_Transfer("Local transfer", 19);
+
 	}
+
+	@Test 
+	(priority = 18)
+	public void MONEY_TRANSFER_INTERNATIONAL_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.International_Transfer("International transfer", 20);
+
+	}
+
+	@Test 
+	(priority = 19)
+	public void MONEY_TRANSFER_WU_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.WU_Transfer("WU transfer", 21);
+
+	}
+
+	@Test 
+	(priority = 20)
+	public void MONEY_TRANSFER_MONEY_EXPRESS() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Money_Express("Money express transfer", 22);
+
+	}
+
+	@Test 
+	(priority = 21)
+	public void MONEY_TRANSFER_WITHIN_CHARITY_DONATION() throws IOException, InterruptedException   {
+		
+		MoneyTransfer.Charity_Donation("Charity donation transfer", 23);
+	
+	}
+
+	@Test 
+	(priority = 22)
+	public void MONEY_TRANSFER_ZAKATY() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Zakaty("Zakaty transfer", 24);
+	
+	}
+
+	@Test 
+	(priority = 23)
+	public void MONEY_TRANSFER_REQUEST_TO_PAY() throws IOException, InterruptedException   {
+		
+		MoneyTransfer.Request_To_Pay("request to pay transfer", 25);
+
+	}
+
+	@Test 
+	(priority = 24)
+	public void ACCOUNT_IDENTIFIER_MANGAMENET_SERVICE_LINK_MY_ACCOUNT() throws IOException, InterruptedException   {
+
+		AccountIM.link_My_Account("Link my account", 26);
+
+	}
+
+	@Test 
+	(priority = 25)
+	public void ACCOUNT_IDENTIFIER_MANGAMENET_SERVICE_UNLINK_MY_ACCOUNT() throws IOException, InterruptedException   {
+
+		AccountIM.UnLink_My_Account("Unlink my account", 27);
+
+	}
+	*/
+	@Test 
+	(priority = 26)
+	public void APPLY_ONLINE_OPEN_CURRENT_ACCOUNT() throws IOException, InterruptedException   {
+
+		Apply.Open_Account("Open current account", 28);
+
+	}
+
+
+
+
 
 }

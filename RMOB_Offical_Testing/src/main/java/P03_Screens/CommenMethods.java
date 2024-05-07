@@ -177,7 +177,7 @@ public class CommenMethods extends Base {
 		driver.findElement(By.xpath(BUTTON_Continue)).click();
 	}
 
-	public void Get_OTP() throws InterruptedException {
+	public void Get_OTP() throws InterruptedException, IOException {
 
 		try {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -218,8 +218,9 @@ public class CommenMethods extends Base {
 				}
 			}
 		} else {
-			// User clicked "Cancel"
-			// Handle cancellation logic here
+
+			Back_To_Home_Screen();
+
 		}
 	
 		try {

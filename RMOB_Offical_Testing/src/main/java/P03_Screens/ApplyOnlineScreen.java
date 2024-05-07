@@ -109,12 +109,9 @@ public class ApplyOnlineScreen extends Base{
 		Thread.sleep(3000);
 		
 		Methods.Open_Side_Bar();
-		
-		Base.Take_SscreenShot("APPLY ONLINE", "OPEN APPLY ONLINE");
-		
+				
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_ApplyOnline)).click();
-		Base.Take_SscreenShot("APPLY ONLINE" , "");
 			
 	}
 	// ============================================================================
@@ -124,44 +121,38 @@ public class ApplyOnlineScreen extends Base{
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(SELECT_Currency)).click();
-		Base.Take_SscreenShot( RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(OPTION_Currency)).click();
-		Base.Take_SscreenShot( RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(SELECT_Signature)).click();
-		Base.Take_SscreenShot( RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(OPTION_Signature)).click();
-		Base.Take_SscreenShot( RportName , "");
 		
 		try {
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(SELECT_Purpose)).click();
-			Base.Take_SscreenShot( RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_Purpose)).click();
-			Base.Take_SscreenShot( RportName , "");
+
 		} catch (Exception e) {
+
 			// DO NOTHING
+
 		}
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_Continue2)).click();
-		Base.Take_SscreenShot( RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(CHECKBOX)).click();
-		Base.Take_SscreenShot( RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_AddAccount)).click();
-		Base.Take_SscreenShot( RportName , "");
-		
 		
 		Methods.Get_OTP();
 		

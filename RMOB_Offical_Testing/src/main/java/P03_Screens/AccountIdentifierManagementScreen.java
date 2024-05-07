@@ -2,6 +2,9 @@ package P03_Screens;
 
 import java.io.IOException;
 import java.time.Duration;
+
+import javax.swing.JOptionPane;
+
 import org.openqa.selenium.By;
 import P01_Base.Base;
 import P04_Utils.Data;
@@ -24,7 +27,9 @@ public class AccountIdentifierManagementScreen extends Base {
 	String selectAcc = "//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View";
 	String BUTTON_CurrentAccount = "(//android.widget.TextView[@text=\"Current Account\"])[2]";
 	String BUTTON_Identifier = "//android.widget.TextView[@text='Identifier']";
-	String BUTTON_IdentifierOption = "lbl-19";
+	String BUTTON_LinkNewAccount = "//android.widget.Button[@text='Link New Account']";
+	String BUTTON_IdentifierOption1 = "(//android.widget.TextView[contains(@text, '966')]) [1]";
+	String BUTTON_IdentifierOption2 = "(//android.widget.TextView[contains(@text, '@')]) [1]";
 	String BUTTON_Continue = "//android.widget.Button[@text='Continue']";
 	String BUTTON_Confirm = "//android.widget.Button[@text='Confirm']";
 	String confirmUnlink = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.widget.Button";
@@ -51,84 +56,85 @@ public class AccountIdentifierManagementScreen extends Base {
 	// ============================================================================
 	
 	public void link_My_Account(String RportName , int RowNumeber) throws IOException, InterruptedException {
+
 		try {
 
-			Base.Take_SscreenShot(RportName, "LINK MY ACCOUNT TEST START");
-
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_AccountIcon)).click();
 
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(AppiumBy.androidUIAutomator(command)).click();
+			Thread.sleep(5000);
+
+			try {
+				
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.findElement(By.xpath(BUTTON_LinkNewAccount)).click();	
+
+			} catch (Exception e) {
+				
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.findElement(AppiumBy.androidUIAutomator(command)).click();
+			
+			}
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_Account)).click();
+
+			JOptionPane.showMessageDialog(null, "Please choose account to link the press ok ");
+
 
 			/*
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_CurrentAccount)).click();
 			
+			*/
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_Identifier)).click();
 
+			Thread.sleep(5000);
+
 			try {
+
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				Base.Take_SscreenShot(RportName , "");
-				driver.findElement(By.id(BUTTON_IdentifierOption)).click();
+				driver.findElement(By.xpath(BUTTON_IdentifierOption1)).click();
+
 			} catch (Exception e) {
-				// TODO: handle exception
+
+				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+				driver.findElement(By.xpath(BUTTON_IdentifierOption2)).click();
+				
 			}
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_Continue)).click();
-			*/
+
 
 			Thread.sleep(10000);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_Confirm)).click();
 			
 			try {
-				Methods.Get_OTP();
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
 
-			Thread.sleep(10000);
-
-			try {
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_Home)).click();
-			} catch (Exception e) {
-				// TODO: handle exception
-			}
-
-			
-			try {
 				Methods.MW_PopUps();
+				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
+				Methods.Back_To_Home_Screen();
+
 			} catch (Exception e) {
-				// TODO: handle exception
-			}
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
+				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 			
-			Base.Take_SscreenShot(RportName , "LINK MY ACCOUNT TEST IS PASSED");
-			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+			}	
 
-			} catch (Exception e) {
-				
-				Methods.Back_To_Home_Screen();
-				Base.Take_SscreenShot_Fail(RportName , " ERROR IN LINK MY ACCOUNT  TEST" + '\n' +e);
-				Data.Set_Methode_Status( RowNumeber, RportName , "FAIL" );
-				Methods.Back_To_Home_Screen();
+		} catch (Exception e) {
 
-				
-			}
+			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
+
+		}
 	}
 	// ============================================================================
 
@@ -136,10 +142,8 @@ public class AccountIdentifierManagementScreen extends Base {
 		
 		try {
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			Base.Take_SscreenShot(RportName , "");
 			driver.findElement(By.xpath(BUTTON_AccountIcon)).click();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -147,46 +151,50 @@ public class AccountIdentifierManagementScreen extends Base {
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_UnlinkMyAccount)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Account)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			Methods.action_clickOnPosition(500, 2260);
 			Methods.action_clickOnPosition(500, 2260);
 
+			Thread.sleep(3000);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(SELECT_UnlinkReason)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_UnlinkReason)).click();
 			Base.Take_SscreenShot(RportName , "");
 			
+			Thread.sleep(3000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Continue)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Confirm)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+			
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+			
 			}	
+		
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+		
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+		
 		}
+		
 		Methods.Back_To_Home_Screen();
 		
 	}
