@@ -76,11 +76,9 @@ public class AddNewBeneficaryScreen extends Base {
 		
 		Thread.sleep(3000);
 				
-		Base.Take_SscreenShot("ADD NEW BENFICIARY", "OPEN NEW BENFICIARY");
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_NewBenf)).click();
-		Base.Take_SscreenShot("ADD NEW BENFICIARY" , "");
+
 	}
 	// ============================================================================
 
@@ -88,20 +86,21 @@ public class AddNewBeneficaryScreen extends Base {
 		
 		try {
 			try {
+			
 				Open_New_Benf();
+
 			} catch (Exception e) {
+				
 				// DO NOTHING 
+			
 			}
 			
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_WithinRiyadBank)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_AccountNumber)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 		    driver.pressKey(keyEvent3);
 		    driver.pressKey(keyEvent0);
@@ -116,7 +115,6 @@ public class AddNewBeneficaryScreen extends Base {
 		    driver.pressKey(keyEvent9);
 		    driver.pressKey(keyEvent4);
 		    driver.pressKey(keyEvent0);
-		    // 3030850959940
 		    
 		    driver.navigate().back();
 		    
@@ -124,39 +122,41 @@ public class AddNewBeneficaryScreen extends Base {
 		    
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(SELECT)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_Relationship)).click();
-			Base.Take_SscreenShot(RportName , "");
 		    
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.Get_OTP();
 		    
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+				
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			}	
+			
+			}
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+		
 		}
+		
 		Methods.Back_To_Home_Screen();
+
 	}
 	// ============================================================================
 
@@ -164,79 +164,77 @@ public class AddNewBeneficaryScreen extends Base {
 		
 		try {
 			try {
+
 				Open_New_Benf();
+
 			} catch (Exception e) {
+
 				// DO NOTHING
+
 			}
 			
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_LocalBank)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_IBAN)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_IBAN)).sendKeys("SA12 6000 0000 9236 3945 0001");
-			Base.Take_SscreenShot(RportName , "");
-			// 10 4500 0000 0011 5416 0001
 			
 			driver.navigate().back();
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_BenfName1)).sendKeys("AUTOMATION");
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(SELECT_BenfCity)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_BenfCity)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT+") [2]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_Relationship)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(5000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(10000);
 			
 			Methods.Get_OTP();
 		    
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+			
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			}	
+			
+			}
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+		
 		}
+		
 		Methods.Back_To_Home_Screen();
+	
 	}
 	// ============================================================================
 
@@ -247,16 +245,18 @@ public class AddNewBeneficaryScreen extends Base {
 		    Actions actions = new Actions(driver);
 
 			try {
+
 				Open_New_Benf();
+
 			} catch (Exception e) {
+
 				// DO NOTHING 
+
 			}
 			
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_InternationalBank)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			/*
 			// SWIFT CODE INPUT
@@ -273,67 +273,52 @@ public class AddNewBeneficaryScreen extends Base {
 			// COUNTRY SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT2+") [1]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).sendKeys("UNITED ARAB EMIRATES");
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
 			
 		
 			// CURRENCY SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT2+") [2]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).sendKeys("AED");
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			
 			// BANK NAME SELECT 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT2+") [3]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
-			
-			
+						
 			// IBAN INPUT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [4]")).sendKeys("AE680340001234567891234");
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			// BENF NAME INPUT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [5]")).sendKeys("AUTOMATION TEST");
-			Base.Take_SscreenShot(RportName , "");
 			
 			// RELATIONSHIP SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT2+") [4]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 	        actions.moveToElement(driver.findElement(By.xpath(CHECKBOX))).click().sendKeys(Keys.PAGE_DOWN).perform();
 			
@@ -342,42 +327,43 @@ public class AddNewBeneficaryScreen extends Base {
 	        // ADDRESS INPUT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [last()]")).click();;
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+")  [last()]")).sendKeys("DUBAI");
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(5000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(15000);
 			
 			Methods.Get_OTP();
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+			
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+			
 			}	
+		
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+		
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+		
 		}
+		
 		Methods.Back_To_Home_Screen();
 	}
 	// ============================================================================
@@ -386,58 +372,52 @@ public class AddNewBeneficaryScreen extends Base {
 		
 		try {
 			try {
+				
 				Open_New_Benf();
-			} catch (Exception e) {
-				// DO NOTHING
-			}
 			
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
+			} catch (Exception e) {
+			
+				// DO NOTHING
+			
+			}
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_MoneyExpress)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			// COUNTRY SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT+") [1]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).sendKeys("India");
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION2 + "[ @text='India']")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			
 			// SERVICE SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT3+") [1]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION2 + "[ @text='Express Remittance']")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 	
 			// PRODUCT SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT3+") [2]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION2 + "[ @text='Credit Beneficiary Account']")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
@@ -446,9 +426,13 @@ public class AddNewBeneficaryScreen extends Base {
 			Methods.action_clickOnPosition(700, 1650);
 			
 			try {
+
 				Methods.MW_PopUps();
+			
 			} catch (Exception e) {
+			
 				// DO NOTHING 
+			
 			}
 			
 			Thread.sleep(3000);
@@ -456,43 +440,38 @@ public class AddNewBeneficaryScreen extends Base {
 			// BANK NAME 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT+") [3]")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION2 + " [@text='ICICI Bank Limited']")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			// BRANCH NAME 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [6]")).sendKeys("Azed Market");
-			Base.Take_SscreenShot(RportName , "");
 			
 			// BRANCH CITY 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [7]")).sendKeys("Delhi");
-			Base.Take_SscreenShot(RportName , "");
 			
 			// BENF ACCOUNT NUMBER 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [8]")).sendKeys("62258812194122401120");
-			Base.Take_SscreenShot(RportName , "");
 			
 			// IFSC CODE
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [9]")).sendKeys("ICIC0001023");
-			Base.Take_SscreenShot(RportName , "");
 			
 			try {
+			
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.findElement(By.xpath(BUTTON_Continue2)).click();
-				Base.Take_SscreenShot(RportName , "");
+			
 			} catch (Exception e) {
+			
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.findElement(AppiumBy.androidUIAutomator(command)).click();
 				
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.findElement(By.xpath(BUTTON_Continue2)).click();
-				Base.Take_SscreenShot(RportName , "");
 			}
 			
 			// =================== PAGE 2 ===================
@@ -500,60 +479,58 @@ public class AddNewBeneficaryScreen extends Base {
 			// BENF NAME 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [1]")).sendKeys("AUTOMATION TESTTT");
-			Base.Take_SscreenShot(RportName , "");
 			
 			// RELATIONSHIP
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT+") [1]")).click();
-			Base.Take_SscreenShot(RportName , "");	
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION2 + "[ @text='Family']")).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			// BENF MOBILE 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [5]")).sendKeys("0545980075");
-			Base.Take_SscreenShot(RportName , "");
 			
 			// BENF ID 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+INPUT+") [8]")).sendKeys("12345");
-			Base.Take_SscreenShot(RportName , "");	
 			
 			// CHECKBOX 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			// CHECKBOX 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.Get_OTP();
 						
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+			
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+			
 			}	
+		
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+		
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+		
 		}
+
 		Methods.Back_To_Home_Screen();
+	
 	}
 	// ============================================================================
 

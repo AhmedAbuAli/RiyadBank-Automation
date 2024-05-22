@@ -73,7 +73,6 @@ public class InvestmentScreen extends Base{
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_Investments)).click();		
-		Base.Take_SscreenShot("INVESTMENT", "OPEN INVESTMENT");
 	}
 	// ============================================================================
 	
@@ -81,54 +80,39 @@ public class InvestmentScreen extends Base{
 		
 		try {
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-			
 			Open_Investments();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_IPO)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(10000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Arrow)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			String Selected_Option = Methods.Choose_List(Companies, "Company", "Please select a company to continue ");
 			
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("//android.widget.TextView[@text = '"+Selected_Option+"']")).click();
-			Base.Take_SscreenShot(RportName , "");
-			
-
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CheckBox)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Select)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(RADIO_Individual)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Save)).click();
-			Base.Take_SscreenShot(RportName , "");
-			/*
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).click();
-			Base.Take_SscreenShot(RportName , "");
 		
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).sendKeys("10");
-			Base.Take_SscreenShot(RportName , "");
-				*/
+			
 			driver.navigate().back();
 			
 			Thread.sleep(5000);
@@ -136,38 +120,38 @@ public class InvestmentScreen extends Base{
             driver.pressKey(keyEvent1);
             driver.pressKey(keyEvent0);
 
-			
 	        JOptionPane.showMessageDialog(null, "Please confirm that the account has enough balance , if not please change manually ");
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Continue)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Continue)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Accept)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Accept)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 		}
+
 		Methods.Back_To_Home_Screen();
 		
 	}
@@ -177,13 +161,11 @@ public class InvestmentScreen extends Base{
 		
 		try {
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
 			
 			Open_Investments();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_TimeDeposit)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(5000);
 			
@@ -192,40 +174,43 @@ public class InvestmentScreen extends Base{
             driver.pressKey(keyEvent5);
             
             for (int i = 1; i < 5; i++) {
-                driver.pressKey(keyEvent0);
+
+				driver.pressKey(keyEvent0);
+
 			}
             
-             driver.navigate().back();
+            driver.navigate().back();
              
  			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
  			driver.findElement(By.xpath(Radio_Capitalize_Profit)).click();
- 			Base.Take_SscreenShot(RportName , "");
              
  			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
  			driver.findElement(By.xpath(BUTTON_Continue)).click();
- 			Base.Take_SscreenShot(RportName , "");
  			
  			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
  			driver.findElement(By.xpath(CheckBox)).click();
- 			Base.Take_SscreenShot(RportName , "");
  			
  			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
  			driver.findElement(By.xpath(BUTTON_TimeDeposit2)).click();
- 			Base.Take_SscreenShot(RportName , ""); 			
- 			
  			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 		}
+
 		Methods.Back_To_Home_Screen();
 	}
 	

@@ -53,11 +53,8 @@ public class BillsGovermentPaymentScreen extends Base  {
 		
 		Methods.Open_Side_Bar();
 		
-		Base.Take_SscreenShot("BILLS & GOVERMENT PAYMENT", "OPEN BILLS & GOVERMENT PAYMENT");
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_BillsGovPay)).click();
-		Base.Take_SscreenShot("BILLS & GOVERMENT PAYMENT" , "");
 			
 	}
 	// ============================================================================
@@ -68,39 +65,34 @@ public class BillsGovermentPaymentScreen extends Base  {
 		
 		try {
 			
-			
 			Open_Bills_Goverment_Payment();
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_NewBill)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(VIEW_SelectCategory)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_OptionCategory)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(VIEW_SelectBiller)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_OptionBiller)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 	        // Press the key '8' eight times
 	        for (int i = 0; i < 8; i++) {
-	            KeyEvent keyEvent = new KeyEvent(AndroidKey.DIGIT_8);
-	            Thread.sleep(1000);
-	            driver.pressKey(keyEvent);
-	        }
 
-	        // 
+				KeyEvent keyEvent = new KeyEvent(AndroidKey.DIGIT_8);
+
+				Thread.sleep(1000);
+
+				driver.pressKey(keyEvent);
+
+			}
+ 
 	        // Press the key '0'
 	        KeyEvent keyEvent0 = new KeyEvent(AndroidKey.DIGIT_0);
 	        driver.pressKey(keyEvent0);
@@ -113,55 +105,51 @@ public class BillsGovermentPaymentScreen extends Base  {
 	        KeyEvent keyEvent7 = new KeyEvent(AndroidKey.DIGIT_7);
 	        driver.pressKey(keyEvent7);
 			
-			
 			Methods.action_clickOnPosition(950, 2260);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_SaveBill)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.navigate().back();
 
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_PrefrredName)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_PrefrredName)).sendKeys("TEST"+Integer.toString(Methods.Generate_Random_App_Passcode()));
-			Base.Take_SscreenShot(RportName , "");
-			
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Continue2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_RegisterAndSaveBill)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.Get_OTP();
 			
-							
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
+				
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 				Methods.Back_To_Home_Screen();
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 				
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-				Base.Take_SscreenShot(RportName , "");	
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 			Methods.Back_To_Home_Screen();
 
 		}
+
 	}
 	// ============================================================================
 
@@ -173,25 +161,19 @@ public class BillsGovermentPaymentScreen extends Base  {
 
 			Open_Bills_Goverment_Payment();
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_MyBills)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(10000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_AllBills)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX_Bill)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_BillAmount)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 	        // Press the key '1'
 	        KeyEvent keyEvent1 = new KeyEvent(AndroidKey.DIGIT_1);
@@ -206,36 +188,41 @@ public class BillsGovermentPaymentScreen extends Base  {
 	        
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Pay)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
-			Thread.sleep(30000);
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(BUTTON_Pay)).click();
-			Base.Take_SscreenShot(RportName , "");
 			Thread.sleep(30000);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Pay)).click();
-			Base.Take_SscreenShot(RportName , "");
+
+			Thread.sleep(30000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(BUTTON_Pay)).click();
 			
 			Methods.Get_OTP();
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
+
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 				Methods.Back_To_Home_Screen();
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 				
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-				Base.Take_SscreenShot(RportName , "");	
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 			Methods.Back_To_Home_Screen();
 
 		}

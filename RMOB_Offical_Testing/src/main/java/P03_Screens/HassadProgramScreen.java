@@ -44,7 +44,6 @@ public class HassadProgramScreen extends Base {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_Hassad)).click();		
-		Base.Take_SscreenShot("HASSAD PROGRAM", "OPEN HASSAD");
 	}
 	// ============================================================================
 	
@@ -52,72 +51,70 @@ public class HassadProgramScreen extends Base {
 		
 		try {
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-
 			Open_Hassad();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Transfer)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.navigate().back();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_Benf)).click();
-			Base.Take_SscreenShot(RportName , "");
-			
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_Amount)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_Amount)).sendKeys("10");
-			Base.Take_SscreenShot(RportName , "");
 			
 			Thread.sleep(3000);
 			
-	        driver.pressKey(keyEvent1);
+			driver.pressKey(keyEvent1);
 	        driver.pressKey(keyEvent0);
 
 			driver.navigate().back();
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(ARROW_Message)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_Messge)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Continue2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
-			Base.Take_SscreenShot(RportName , "");		
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Transfer2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
-			/* 
-			 * TO CONTINUE 
-			 */
+			/*
+			
+			
+			  TO CONTINUE 
+			 
+			 
+			  */
 				
 			try {
+			
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+			
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+			
 			}	
+		
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+		
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+		
 		}
+		
 		Methods.Back_To_Home_Screen();
 		
 	}

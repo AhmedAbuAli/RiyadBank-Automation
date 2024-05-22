@@ -12,8 +12,10 @@ import P03_Screens.ApplyOnlineScreen;
 import P03_Screens.BillsGovermentPaymentScreen;
 import P03_Screens.ChatBotScreen;
 import P03_Screens.CommenMethods;
+import P03_Screens.HassadProgramScreen;
 import P03_Screens.InvestmentScreen;
 import P03_Screens.LoginScreen;
+import P03_Screens.LogoutScreen;
 import P03_Screens.MoneyTransferScreen;
 import P03_Screens.PersonalFinanceManagementScreen;
 import P03_Screens.TokenProgramScreen;
@@ -40,23 +42,27 @@ public class Tasks extends Base {
 	PersonalFinanceManagementScreen PMF = new PersonalFinanceManagementScreen();
 	AddNewBeneficaryScreen AddNewBenf = new AddNewBeneficaryScreen();
 	MoneyTransferScreen MoneyTransfer  = new MoneyTransferScreen();
+	HassadProgramScreen Hassad = new HassadProgramScreen();
 	AccountCardsScreen Account = new AccountCardsScreen();
 	InvestmentScreen Investment = new InvestmentScreen();
 	TokenProgramScreen Token = new TokenProgramScreen();
 	ApplyOnlineScreen Apply = new ApplyOnlineScreen();
 	CommenMethods Methods  = new CommenMethods() ; 
 	ChatBotScreen ChatBot = new ChatBotScreen();
+	LogoutScreen Logout = new LogoutScreen();
 	LoginScreen Login =  new LoginScreen();
 	Base Base = new Base();
 	Data Data = new Data();
 
+		/*
 	@Test 
 	(priority = 1)
 	public void START_AND_LOGIN() throws IOException, InterruptedException   {
 
 		Login.Login("Login" , 3);
+		
 	}
-	/*
+
 	@Test 
 	(priority = 2)
 	public void ACCOUNTS_AND_CARDS_CHECK_ACCOUNT_DETAILS() throws IOException, InterruptedException   {
@@ -246,7 +252,7 @@ public class Tasks extends Base {
 		AccountIM.UnLink_My_Account("Unlink my account", 27);
 
 	}
-	*/
+
 	@Test 
 	(priority = 26)
 	public void APPLY_ONLINE_OPEN_CURRENT_ACCOUNT() throws IOException, InterruptedException   {
@@ -255,8 +261,197 @@ public class Tasks extends Base {
 
 	}
 
+	@Test 
+	(priority = 27)
+	public void APPLY_ONLINE_OPEN_SAVING_ACCOUNT_WITHOUT_INCOME() throws IOException, InterruptedException   {
 
+		Apply.Open_Account("Open saving account without income", 29);
 
+	}
 
+	@Test 
+	(priority = 28)
+	public void APPLY_ONLINE_OPEN_SAVING_ACCOUNT_WITh_INCOME() throws IOException, InterruptedException   {
+
+		Apply.Open_Account("Open saving account with income", 30);
+
+	}
+
+	@Test 
+	(priority = 29)
+	public void APPLY_ONLINE_APPLY_FOR_CREDIT_CARD() throws IOException, InterruptedException   {
+
+		Apply.Create_Credit_Card("Apply for a credit card", 30);
+	
+	}
+
+	@Test 
+	(priority = 30)
+	public void TOKEN_PROGRAM_APPLY_FOR_TOKEN () throws IOException, InterruptedException   {
+
+		Data.Set_Methode_Status(32 , "Apply for a token" , "SKIP");
+		Base.Skip_Method();	
+
+	}
+	
+	@Test 
+	(priority = 31)
+	public void APPLY_ONLINE_APPLY_FOR_VIRTUAL_CARD() throws IOException, InterruptedException   {	
+
+		Data.Set_Methode_Status(33 , "Apply for a virtual card" , "SKIP");
+		Base.Skip_Method();	
+
+	}
+
+	@Test 
+	(priority = 32)
+	public void APPLY_ONLINE_APPLY_FOR_PREPAID_CARD() throws IOException, InterruptedException   {
+		
+		Apply.Creat_Prepaid_Card("Apply for a pre-paid", 33);
+	
+	}
+
+	@Test 
+	(priority = 33)
+	public void APPLY_ONLINE_APPLY_FOR_SALARY_CARD() throws IOException, InterruptedException   {
+
+		Data.Set_Methode_Status(35 , "Apply for a salary card" , "SKIP");
+		Base.Skip_Method();	
+
+	}
+
+	@Test 
+	(priority = 34)
+	public void APPLY_ONLINE_APPLY_FOR_MULTI_CURRENCY_CARD() throws IOException, InterruptedException   {
+	
+		Apply.Creat_Multi_Currency_Card("Apply for a multi currency card", 36);
+	
+	}
+
+	@Test 
+	(priority = 35)
+	public void APPLY_ONLINE_APPLY_FOR_WAZEN() throws IOException, InterruptedException   {
+
+		Apply.Creat_Wazen("Apply for wazen", 37);
+
+	}
+
+	@Test 
+	(priority = 36)
+	public void ADD_NEW_BENFICIARY_RIYAD_BANK_BENFICIARY() throws IOException, InterruptedException   {
+		
+		AddNewBenf.Riyad_Bank_Benf("Add riyad bank beneficiary", 38);
+	
+	}
+
+	@Test 
+	(priority = 37)
+	public void ADD_NEW_BENFICIARY_LOCAL_BENFICIARY() throws IOException, InterruptedException   {
+	
+		AddNewBenf.Local_Bank_Benf("Add local beneficiary", 39);
+	
+	}
+
+	@Test 
+	(priority = 38)
+	public void ADD_NEW_BENFICIARY_INTERNATIONAL_BENFICIARY() throws IOException, InterruptedException   {
+
+		AddNewBenf.International_Bank_Benf("Add international beneficiary", 40);
+
+	}
+
+	@Test 
+	(priority = 39)
+	
+	public void ADD_NEW_BENFICIARY_MONEY_EXPRESS_BENFICIARY() throws IOException, InterruptedException   {
+
+		AddNewBenf.Money_Express_Benf("Add money express beneficiary", 41);
+	
+	}
+
+	@Test 
+	(priority = 40)
+	public void ACCOUNTS_AND_CARDS_CREDIT_CARD_STOP_CARD() throws IOException, InterruptedException   {
+
+		Account.Stop_Card("Stop credit card", 42);
+	
+	}
+
+	@Test 
+	(priority = 41)
+	public void ACCOUNTS_AND_CARDS_DEBIT_CARD_STOP_CARD() throws IOException, InterruptedException   {
+		
+		Account.Stop_Temporary("Stop credit card", 43);
+	
+	}
+
+	@Test 
+	(priority = 42)
+	public void PERSONAL_FINANCE_MANAGEMENT_CHECK_ACTIVITY() throws IOException, InterruptedException   {
+		
+		PMF.PFM_Check_Activity("Check personal finance mangement details", 44);
+
+	}
+	
+	@Test 
+	(priority = 43)
+	public void INSURANCE_CHECK_MOTOR_INSURANCE_DETAILS() throws IOException, InterruptedException   {
+		
+		Apply.Insurance_Motor_Details("Check motor insurance details",45 );
+	
+	}
+
+	@Test
+	(priority = 44)
+	public void INVESTMENTS_IPO() throws IOException, InterruptedException {
+
+		Investment.IPO("IPO", 46);
+	
+	}
+
+	@Test
+	(priority = 45)
+	public void INVESTMENTS_TIME_DEPOSIT() throws IOException, InterruptedException {
+
+		Investment.Time_Deposit("Time deposit", 47);
+
+	}
+
+	@Test
+	(priority = 46)
+	public void HASSAD_PROGRAM_TRANSFER() throws IOException, InterruptedException {
+	
+		Hassad.Hassad_Transfer("Transfer hassad points", 48); //  NOT COMPLETED YET 
+	
+	}
+
+	@Test
+	(priority = 47)
+	public void GOVERMENT_PAYMENT_ADD_BILL() throws IOException, InterruptedException {
+
+		BillsGovermentPayment.Add_New_Bill("Add a bill", 49);
+	
+	}
+	
+	@Test
+	(priority = 48)
+	public void GOVERMENT_PAYMENT_PAY_BILL() throws IOException, InterruptedException {
+		BillsGovermentPayment.Pay_Bill("Pay a bill", 50);
+	}
+
+	@Test
+	(priority = 60)
+	public void LOGOUT() throws IOException, InterruptedException {
+		Logout.Logout("Logout", 51);
+	}	
+*/
+
+@Test 
+(priority = 2)
+public void APPLY_ONLINE_APPLY_FOR_PERSONAL_LOAN() throws IOException, InterruptedException   {
+	
+	Apply.Apply_Personal_Loan("Apply for personal loan ",51 );
+
+}
 
 }

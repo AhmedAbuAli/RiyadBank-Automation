@@ -475,39 +475,44 @@ public class AccountCardsScreen extends Base {
 		
 		try {
 
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
-
 			try {
+
 				Open_Dedit_Card();
 
 			} catch (Exception e) {
+			
 				// DO NOTHING
+
 			}
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO CHECK THEN PRESS OK");
 	        
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_StopTemporary)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Confirm2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.Get_OTP();
 	        
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 		}
+
 		Methods.Back_To_Home_Screen();
 		
 	}
@@ -527,6 +532,7 @@ public class AccountCardsScreen extends Base {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_CreditCards)).click();
+
 		Thread.sleep(10000);
 	}
 	
@@ -718,9 +724,13 @@ public class AccountCardsScreen extends Base {
 	try {
 			
 		try {
+
 			Open_Credit_Card();
+
 		} catch (Exception e) {
-			// TODO: handle exception
+
+			// DO NOTHING
+		
 		}
 		
 		Base.Take_SscreenShot(RportName, RportName + "TEST START");
@@ -732,39 +742,41 @@ public class AccountCardsScreen extends Base {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(SELECT_REASON)).click();
-		Base.Take_SscreenShot(RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(OPTION_REASON)).click();
-		Base.Take_SscreenShot(RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_Continue2)).click();
-		Base.Take_SscreenShot(RportName , "");
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_StopCard)).click();
-		Base.Take_SscreenShot(RportName , "");
 		
 		Methods.Get_OTP();
 		
 		Thread.sleep(5000);
 		
 		try {
+
 			Methods.MW_PopUps();
-			Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST");
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot(RportName ,  RportName + "TEST IS PASSED");
+
+			Base.Take_SscreenShot(RportName ,  RportName + "");
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 		}			
+
 	} catch (Exception e) {
-		Base.Take_SscreenShot_Fail(RportName ,  "ERROR" + RportName +  "TEST" + '\n' +e);
+
 		Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 
 	}
+
 	Methods.Back_To_Home_Screen();
-	}
+
+}
 	// ============================================================================
 
 

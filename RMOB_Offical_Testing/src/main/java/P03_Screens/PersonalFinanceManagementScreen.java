@@ -28,11 +28,9 @@ public class PersonalFinanceManagementScreen extends Base{
 		
 		Thread.sleep(3000);
 				
-		Base.Take_SscreenShot("PERSONAL FINANCE MANAGEMENT", "OPEN PERSONAL FINANCE MANAGEMENT");
-		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_PFM)).click();
-		Base.Take_SscreenShot("PERSONAL FINANCE MANAGEMENT" , "");
+
 	}
 	// ============================================================================
 
@@ -42,41 +40,45 @@ public class PersonalFinanceManagementScreen extends Base{
 		try {
 
 			try {
+
 				Open_PFM();
+
 			} catch (Exception e) {
+
 				// DO NOTHING 
+
 			}
-			
-			Base.Take_SscreenShot(RportName, RportName + "TEST START");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Expenses)).click();
-			Base.Take_SscreenShot( RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Incomes)).click();
-			Base.Take_SscreenShot( RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Activity)).click();
-			Base.Take_SscreenShot( RportName , "");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath( BUTTON_ViewMore)).click();
-			Base.Take_SscreenShot( RportName , "");
 			
 			try {
+
 				Methods.MW_PopUps();
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 			} catch (Exception e) {
-				Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+				Base.Take_SscreenShot(RportName ,  RportName + "" );
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 			}	
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 		}
+
 		Methods.Back_To_Home_Screen();
 		
 	}

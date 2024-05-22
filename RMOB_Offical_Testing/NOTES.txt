@@ -4,10 +4,10 @@ Data.Set_Methode_Status(Row Number , Method Name , "SKIP");
 Base.Skip_Method();		
 
 
-=============================== DONE SCRIPTS =============================== 
+=============================== DONE SCRIPTS ==============================================================
 
 01 - LOGIN 
-
+02 - ACCOUNT IDENTIFIER MANGAMENET SERVICE - LINK MY ACCOUNT 
 03 - ACCOUNTS AND CARDS - CHECK ACCOUNT DETAILS
 04 - ACCOUNTS AND CARDS - DEBIT CARD - EDIT POS LIMIT
 05 - ACCOUNTS AND CARDS - DEBIT CARD - DEACTIVE & ACTIVE CONTACTLESS
@@ -31,7 +31,6 @@ Base.Skip_Method();
 24 - MONEY TRANSFER - CHARITY DONATION
 25 - MONEY TRANSFER - ZAKATY 
 26 - MONEY TRANSFER - REQUEST TO PAY
-02 - ACCOUNT IDENTIFIER MANGAMENET SERVICE - LINK MY ACCOUNT 
 27 - ACCOUNT IDENTIFIER MANGAMENET SERVICE - UNLINK MY ACCOUNT
 28 - APPLY ONLINE - OPEN ADDINTIIONAL ACCOUNT
 29 - APPLY ONLINE - OPEN SAVING ACCOUNT WITHOUT INCOME 
@@ -54,18 +53,13 @@ Base.Skip_Method();
 46 - ACCOUNTS AND CARDS - DEBIT CARD - STOP TEMPORARY
 47 - IPO 
 48 - HASSAD TRANSFER ( REVIEW BEFORE ADDING ) 
-49 - TIME DEPOSIT  
-50 - LOGOUT
+49 - TIME DEPOSIT 
+50 - APPLY ONLINE - APPLY FOR PERSONAL LOAN
+51 - ACCOUNTS AND CARDS - REFINANCE 
 
 
-=============================== NEW ( NOT ADDED TO REGRESSION YET ) ===============================
 
-47 - IPO ( NO NEED FOR REVIEW )
-48 - HASSAD TRANSFER ( REVIEW BEFORE ADDING ) 
-49 - TIME DEPOSIT ( NO NEED FOR REVIEW ) 
-
-
-=============================== TEMPLETE FOR ANY FUNCTION ============================						
+=============================== TEMPLETE FOR ANY FUNCTION ===============================						
 
 public void Method_Name(String RportName , int RowNumeber) throws IOException, InterruptedException {
 	
@@ -80,17 +74,23 @@ public void Method_Name(String RportName , int RowNumeber) throws IOException, I
 				
 																	*/
 		try {
+
 			Methods.MW_PopUps();
-			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 		} catch (Exception e) {
-			Base.Take_SscreenShot(RportName ,  RportName + " TEST IS PASSED ");
+
+			Base.Take_SscreenShot(RportName ,  RportName + " ");
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
 		}	
+
 	} catch (Exception e) {
-		Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
+
 		Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+
 	}
+	
 	Methods.Back_To_Home_Screen();
 	
 }

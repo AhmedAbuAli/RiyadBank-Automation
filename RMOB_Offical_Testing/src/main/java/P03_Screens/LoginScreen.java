@@ -29,7 +29,13 @@ public class LoginScreen extends Base {
 	CommenMethods Methods = new CommenMethods(); 
 	Base Base = new Base();	
 	Data Data = new Data();
-	String[] options = {"77830909","67005851", "50131511","88180432","12296796","64488507","86661664", "99333996", "61251006" , "78562380" , "50131511"};
+	String[] options = {
+		"77830909",
+		"50131511", 
+		"88180432",
+		"12334059"
+	} ;
+
 
 	public void Login(String RportName , int RowNumeber) throws IOException, InterruptedException  {
 		
