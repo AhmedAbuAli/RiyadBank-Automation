@@ -1,10 +1,10 @@
 # RiyadBank-Automation
 
 ### - TO SKIP ANY METHOD JUST CALL THE FOLLOWING
-
-Data.Set_Methode_Status(Row Number , Method Name , "SKIP");
+```
+Data.Set_Methode_Status(Row Number , Method Name , "SKIP"); <br />
 Base.Skip_Method();		
-
+```
 
 ### - DONE SCRIPTS
 
@@ -61,7 +61,7 @@ Base.Skip_Method();
 
 
 ### - TEMPLETE FOR ANY FUNCTION				
-
+```
 public void Method_Name(String RportName , int RowNumeber) throws IOException, InterruptedException {
 	
 	try {
@@ -95,3 +95,4 @@ public void Method_Name(String RportName , int RowNumeber) throws IOException, I
 	Methods.Back_To_Home_Screen();
 	
 }
+```
