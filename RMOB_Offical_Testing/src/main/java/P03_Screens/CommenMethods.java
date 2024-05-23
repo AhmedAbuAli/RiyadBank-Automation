@@ -2,7 +2,7 @@ package P03_Screens;
 
 import java.io.IOException;
 import java.time.Duration;
-import java.util.ArrayList;
+//import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
@@ -77,31 +77,31 @@ public class CommenMethods extends Base {
 	Boolean Cond = true ; 
 	String Back2 = "//android.widget.Button[@text ='']" ;
 	
-	public static String Choose_List(String[] options, String dialogTitle, String additionalText) {
-        // Create a JPanel with a JComboBox (select list) and a JLabel containing the options and additional text
-        JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
-        JLabel textLabel = new JLabel(additionalText);
-        panel.add(textLabel);
-
-        JComboBox<String> comboBox = new JComboBox(options);
-        panel.add(comboBox);
-
-        // Show the input dialog with the select list and additional text
-        int result = JOptionPane.showConfirmDialog(
-            null,
-            panel,
-            dialogTitle,
-            JOptionPane.OK_CANCEL_OPTION,
-            JOptionPane.PLAIN_MESSAGE
-        );
-
-        String selectedOption = (String) comboBox.getSelectedItem();
-
-
-        return selectedOption;
-    }
+	public String Choose_List(String[] options, String dialogTitle, String additionalText) {
+		// Create a JPanel with a JComboBox (select list) and a JLabel containing the options and additional text
+		JPanel panel = new JPanel();
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+	
+		JLabel textLabel = new JLabel(additionalText);
+		panel.add(textLabel);
+	
+		JComboBox<String> comboBox = new JComboBox<>(options);
+		panel.add(comboBox);
+	
+		// Show the input dialog with the select list and additional text
+		@SuppressWarnings("unused")
+		int result = JOptionPane.showConfirmDialog(
+			null,
+			panel,
+			dialogTitle,
+			JOptionPane.OK_CANCEL_OPTION,
+			JOptionPane.PLAIN_MESSAGE
+		);
+	
+		String selectedOption = (String) comboBox.getSelectedItem();
+	
+		return selectedOption;
+	}
 	
 	public void Back_To_Home_Screen() throws IOException, InterruptedException {
 		
@@ -143,7 +143,7 @@ public class CommenMethods extends Base {
 
 	}
 
-	public static void action_clickOnPosition(int pointA_X, int pointA_Y) { 
+	public void action_clickOnPosition(int pointA_X, int pointA_Y) { 
 		
 	PointerInput finger = new PointerInput(org.openqa.selenium.interactions.PointerInput.Kind.TOUCH, "finger"); 
 	org.openqa.selenium.interactions.Sequence clickPosition = new org.openqa.selenium.interactions.Sequence(finger, 1); 

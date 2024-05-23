@@ -27,7 +27,7 @@ public class LogoutScreen extends Base{
 				driver.findElement(By.id(BUTTON_Back)).click();;				
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			// DO NOTHING
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.id(BUTTON_Profile)).click();;

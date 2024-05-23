@@ -79,6 +79,7 @@ public class AccountCardsScreen extends Base {
 	String BUTTON_OK = "//android.widget.Button[@text = 'OK' ]";
 	String BUTTON_StopTemporary = "//android.widget.Button[@text='Stop Temporary']";
 	String RADIO_PayOtherAmount = "//android.widget.RadioButton[@text='Pay Other Amount']";
+	String BUTTON_Refinance = "//android.widget.Button[@text=' Refinance']";
 
 	
 	// GENERAL VARIABLES
@@ -225,6 +226,50 @@ public class AccountCardsScreen extends Base {
 			Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST " + '\n' +e);
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 		}
+		Methods.Back_To_Home_Screen();
+		
+	}
+	
+	public void Refinance(String RportName , int RowNumeber) throws IOException, InterruptedException {
+	
+		try {
+
+			Thread.sleep(6000);
+			
+			Methods.Open_Side_Bar();
+			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.findElement(By.xpath(BUTTON_AccountsCards)).click();
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.findElement(By.xpath(BUTTON_Accounts)).click();
+			
+	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE ACCOUNT YOU WANT TO CHECK THEN PRESS OK");
+			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+			driver.findElement(By.xpath(BUTTON_Refinance)).click();
+
+			Thread.sleep(10000);
+		
+
+			try {
+	
+				Methods.MW_PopUps();
+				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+	
+			} catch (Exception e) {
+	
+				Base.Take_SscreenShot(RportName ,  RportName + " ");
+				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+	
+			}	
+	
+		} catch (Exception e) {
+	
+			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+	
+		}
+		
 		Methods.Back_To_Home_Screen();
 		
 	}
@@ -1070,5 +1115,3 @@ public class AccountCardsScreen extends Base {
 
 
 }
-
-

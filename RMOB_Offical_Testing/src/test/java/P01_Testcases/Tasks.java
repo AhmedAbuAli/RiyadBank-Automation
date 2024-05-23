@@ -54,7 +54,7 @@ public class Tasks extends Base {
 	Base Base = new Base();
 	Data Data = new Data();
 
-		/*
+
 	@Test 
 	(priority = 1)
 	public void START_AND_LOGIN() throws IOException, InterruptedException   {
@@ -62,7 +62,7 @@ public class Tasks extends Base {
 		Login.Login("Login" , 3);
 		
 	}
-
+		/*
 	@Test 
 	(priority = 2)
 	public void ACCOUNTS_AND_CARDS_CHECK_ACCOUNT_DETAILS() throws IOException, InterruptedException   {
@@ -442,16 +442,18 @@ public class Tasks extends Base {
 	@Test
 	(priority = 60)
 	public void LOGOUT() throws IOException, InterruptedException {
+
 		Logout.Logout("Logout", 51);
+
 	}	
+
+
+	@Test 
+	(priority = 2)
+	public void APPLY_ONLINE_APPLY_FOR_PERSONAL_LOAN() throws IOException, InterruptedException   {
+		
+		Apply.Apply_Personal_Loan("Apply for personal loan ",51 );
+
+	}
 */
-
-@Test 
-(priority = 2)
-public void APPLY_ONLINE_APPLY_FOR_PERSONAL_LOAN() throws IOException, InterruptedException   {
-	
-	Apply.Apply_Personal_Loan("Apply for personal loan ",51 );
-
-}
-
 }

@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
+//import java.net.URL;
 import java.util.Properties;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -43,7 +45,7 @@ public class Base {
 	public void BeforeClass	(
 			@Optional("AhmedM") String deviceName , 
 			@Optional("Android") String platformName , 
-			@Optional("13") String platformVersion  ) throws IOException, InterruptedException {
+			@Optional("13") String platformVersion  ) throws IOException, InterruptedException, URISyntaxException {
 
 		PropFile = new File("C:\\Users\\DELL\\eclipse-workspace\\RMOB_Offical_Testing\\src\\main\\resources\\Config\\Config.properties");
 		InputStream = new FileInputStream(PropFile);
@@ -69,7 +71,7 @@ public class Base {
 		caps.setCapability("newCommandTimeout", 120000);
 		caps.setCapability("automationName", "UiAutomator2");
 		
-	    driver  = new AndroidDriver(new URL(Prop.getProperty("AppiumServer")),caps); 
+        driver = new AndroidDriver(new URI(Prop.getProperty("AppiumServer")).toURL(), caps);
 		
 		System.out.println("APP STARTED SUCCESSFULLY...");
 		System.out.println("===============================================");

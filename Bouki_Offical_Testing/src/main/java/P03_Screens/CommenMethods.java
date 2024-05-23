@@ -109,7 +109,7 @@ public class CommenMethods extends Base {
 		}	
 	}
 
-	public static void Click_On_Point(int pointA_X, int pointA_Y) { 
+	public void Click_On_Point(int pointA_X, int pointA_Y) { 
 		
 	PointerInput finger = new PointerInput(org.openqa.selenium.interactions.PointerInput.Kind.TOUCH, "finger"); 
 	org.openqa.selenium.interactions.Sequence clickPosition = new org.openqa.selenium.interactions.Sequence(finger, 1); 

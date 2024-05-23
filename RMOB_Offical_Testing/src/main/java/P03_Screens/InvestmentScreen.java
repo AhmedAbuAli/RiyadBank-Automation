@@ -1,19 +1,19 @@
 package P03_Screens;
 
-import org.openqa.selenium.Dimension;
+//import org.openqa.selenium.Dimension;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import org.openqa.selenium.interactions.Sequence;
+//import java.util.Collections;
+//import java.util.Iterator;
+//import java.util.List;
+//import org.openqa.selenium.interactions.Sequence;
 import javax.swing.JOptionPane;
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Pause;
-import org.openqa.selenium.interactions.PointerInput;
+//import org.openqa.selenium.interactions.Pause;
+//import org.openqa.selenium.interactions.PointerInput;
 import P01_Base.Base;
 import P04_Utils.Data;
-import io.appium.java_client.AppiumBy;
+//import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
