@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import P01_Base.Base;
 import P04_Utils.Data;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class AccountCardsScreen extends Base {
 
@@ -80,7 +82,33 @@ public class AccountCardsScreen extends Base {
 	String BUTTON_StopTemporary = "//android.widget.Button[@text='Stop Temporary']";
 	String RADIO_PayOtherAmount = "//android.widget.RadioButton[@text='Pay Other Amount']";
 	String BUTTON_Refinance = "//android.widget.Button[@text=' Refinance']";
+	String CHECKBOX = "//android.widget.CheckBox";
+	String uiSelector7 = "new UiSelector().textMatches(\"" +"Apply"+ "\")";
+	String command7 = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector7+ ");";
+	String BUTTON_Apply ="//android.widget.Button[@text = 'Apply']";
+	String SELECT_AllSelect = "//android.widget.TextView[@text ='']";
+	String OPTION_Sector = "//android.widget.TextView[@text='Private']";
+	String OPTION_CurrentEmployer = "//android.widget.TextView[@text='Development and Consulting Services Institute']";
+	String OPTION_IncomeSector = "//android.widget.TextView[@text='GOSI']";
+	String OPTION_City3 = "//android.widget.TextView[@text='Riyadh']";
+	String uiSelector5 = "new UiSelector().textMatches(\"" +"Continue"+ "\")";
+	String command5 = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector5 + ");";
+	String OPTION_PurposeOfLoan = "//android.widget.TextView[@text='Renovation & Home Improvements']";
+	String TextView = "//android.widget.TextView[@text = '";
+	String BUTTON_Calculate = "//android.widget.Button[@text = 'Calculate']";
+	String uiSelector9 = "new UiSelector().textMatches(\"" +"Continue arrow round-forward"+ "\")";
+	String command9 = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector9 + ");";
 
+	KeyEvent keyEvent0 = new KeyEvent(AndroidKey.DIGIT_0);
+    KeyEvent keyEvent1 = new KeyEvent(AndroidKey.DIGIT_1);
+    KeyEvent keyEvent2 = new KeyEvent(AndroidKey.DIGIT_2);
+    KeyEvent keyEvent3 = new KeyEvent(AndroidKey.DIGIT_3);
+    KeyEvent keyEvent4 = new KeyEvent(AndroidKey.DIGIT_4);
+    KeyEvent keyEvent5 = new KeyEvent(AndroidKey.DIGIT_5);
+    KeyEvent keyEvent6 = new KeyEvent(AndroidKey.DIGIT_6);
+    KeyEvent keyEvent7 = new KeyEvent(AndroidKey.DIGIT_7);
+    KeyEvent keyEvent8 = new KeyEvent(AndroidKey.DIGIT_8);
+    KeyEvent keyEvent9 = new KeyEvent(AndroidKey.DIGIT_9);
 	
 	// GENERAL VARIABLES
 	CommenMethods Methods = new CommenMethods();
@@ -246,12 +274,182 @@ public class AccountCardsScreen extends Base {
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE ACCOUNT YOU WANT TO CHECK THEN PRESS OK");
 			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-			driver.findElement(By.xpath(BUTTON_Refinance)).click();
+			Methods.action_clickOnPosition(550, 800);
+			Methods.action_clickOnPosition(550, 800);
 
 			Thread.sleep(10000);
-		
 
+			Thread.sleep(15000);
+			
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(CHECKBOX)).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(AppiumBy.androidUIAutomator(command7));
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(BUTTON_Apply)).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(BUTTON_Continue2)).click();
+
+			// SECTOR
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [1]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(OPTION_Sector)).click();
+
+			Thread.sleep(3000);
+
+			// SALARY DEPOSIT DAY
+			driver.pressKey(keyEvent2);
+			driver.pressKey(keyEvent8);
+
+			driver.navigate().back();
+
+			// CURRENT EMPLOYER
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [2]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(OPTION_CurrentEmployer)).click();
+
+			// INCOME SECTOR 
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [3]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(OPTION_IncomeSector)).click();
+			
+			// CITY
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [4]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(OPTION_City3)).click();
+
+			// POST CODE
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(("("+INPUT+") [2]"))).click();
+
+			driver.pressKey(keyEvent2);
+			driver.pressKey(keyEvent8);
+			driver.pressKey(keyEvent8);
+			driver.pressKey(keyEvent8);
+			driver.pressKey(keyEvent8);
+
+			driver.navigate().back();
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(AppiumBy.androidUIAutomator(command5));
+
+			// BASIC SALARY
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(("("+INPUT+") [4]"))).click();
+
+			driver.pressKey(keyEvent2);
+			driver.pressKey(keyEvent8);
+			driver.pressKey(keyEvent0);
+			driver.pressKey(keyEvent0);
+			driver.pressKey(keyEvent0);
+
+			driver.navigate().back();
+
+			//PURPOSE OF LOAN
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(SELECT_AllSelect)).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(OPTION_PurposeOfLoan)).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(BUTTON_Continue)).click();
+
+			// ==================================== END OF PAGE 1 ====================================
+
+			Thread.sleep(5000);
+
+			// NUMNER OF DEPENDETS
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [1]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(TextView+"1']")).click();
+						
+			// HOME OWNERSHIP
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [2]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(TextView+"Owned']")).click();
+
+			// RESIDENTIAL TYPE
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [3]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(TextView+"Apartment']")).click();
+
+			// RESIDENTIAL TYPE
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [3]")).click();
+
+			Thread.sleep(3000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(TextView+"Apartment']")).click();
+
+
+			// CITY OF RESIDENCE
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath("("+SELECT_AllSelect+") [4]")).click();
+
+			Thread.sleep(7000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(TextView+"ABHA']")).click();
+
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(AppiumBy.androidUIAutomator(command5)).click();
+
+			// ==================================== END OF PAGE 2 ====================================
+
+			Thread.sleep(5000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(BUTTON_Calculate)).click();
+
+			// ==================================== END OF PAGE 3 ====================================
+
+			Thread.sleep(5000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(AppiumBy.androidUIAutomator(command9)).click();
+			
 			try {
 	
 				Methods.MW_PopUps();
@@ -269,6 +467,14 @@ public class AccountCardsScreen extends Base {
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 	
 		}
+
+		driver.navigate().back();
+
+		driver.navigate().back();
+
+		driver.navigate().back();
+		
+		driver.navigate().back();
 		
 		Methods.Back_To_Home_Screen();
 		

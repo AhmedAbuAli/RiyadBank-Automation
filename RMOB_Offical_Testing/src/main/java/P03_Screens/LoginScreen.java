@@ -43,8 +43,6 @@ public class LoginScreen extends Base {
 			
 			String User = Methods.Choose_List( options ,"Login account" , "Please choose an account to login with" );
 						
-			Base.Take_SscreenShot(RportName , "LOGIN TEST START");
-
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(INPUT_Username)).sendKeys(User);
 

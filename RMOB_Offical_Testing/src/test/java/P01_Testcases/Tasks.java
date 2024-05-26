@@ -34,7 +34,6 @@ This suite is used for indivisual tasks
 
 */
 
-
 public class Tasks extends Base {
 	
 	BillsGovermentPaymentScreen BillsGovermentPayment = new BillsGovermentPaymentScreen();
@@ -54,7 +53,7 @@ public class Tasks extends Base {
 	Base Base = new Base();
 	Data Data = new Data();
 
-
+		/*
 	@Test 
 	(priority = 1)
 	public void START_AND_LOGIN() throws IOException, InterruptedException   {
@@ -62,7 +61,7 @@ public class Tasks extends Base {
 		Login.Login("Login" , 3);
 		
 	}
-		/*
+
 	@Test 
 	(priority = 2)
 	public void ACCOUNTS_AND_CARDS_CHECK_ACCOUNT_DETAILS() throws IOException, InterruptedException   {
@@ -439,21 +438,28 @@ public class Tasks extends Base {
 		BillsGovermentPayment.Pay_Bill("Pay a bill", 50);
 	}
 
-	@Test
-	(priority = 60)
-	public void LOGOUT() throws IOException, InterruptedException {
-
-		Logout.Logout("Logout", 51);
-
-	}	
-
-
 	@Test 
-	(priority = 2)
+	(priority = 49)
 	public void APPLY_ONLINE_APPLY_FOR_PERSONAL_LOAN() throws IOException, InterruptedException   {
 		
 		Apply.Apply_Personal_Loan("Apply for personal loan ",51 );
 
 	}
-*/
+		*/
+	@Test 
+	(priority = 50)
+	public void REFINANCE() throws IOException, InterruptedException   {
+
+		Account.Refinance("Refinance", 52);
+	
+	}
+
+	@Test
+	(priority = 51)
+	public void LOGOUT() throws IOException, InterruptedException {
+
+		Logout.Logout("Logout", 53);
+
+	}	
+
 }
