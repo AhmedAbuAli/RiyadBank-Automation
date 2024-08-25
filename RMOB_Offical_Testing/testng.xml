@@ -13,8 +13,8 @@
 		<parameter name="platformVersion" value="13"></parameter>	
 	  
 	 	<classes>     
-	 		<!-- <class name="P01_Testcases.Tasks"></class> --> 
-	 		<class name="P01_Testcases.Regression"></class>
+	 		<class name="P01_Testcases.Tasks"></class> 
+	 		<!-- <class name="P01_Testcases.Regression"></class>--> 
 	 	</classes>
 	</test> 
 	 	

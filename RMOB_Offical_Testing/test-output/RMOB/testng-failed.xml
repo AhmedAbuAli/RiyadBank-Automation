@@ -9,35 +9,15 @@
     <parameter name="platformName" value="Android"/>
     <parameter name="deviceName" value="AhmedM"/>
     <classes>
-      <class name="P01_Testcases.Regression">
+      <class name="P01_Testcases.Tasks">
         <methods>
-          <include name="PERSONAL_FINANCE_MANAGEMENT_CHECK_ACTIVITY"/>
-          <include name="ADD_NEW_BENFICIARY_INTERNATIONAL_BENFICIARY"/>
-          <include name="ADD_NEW_BENFICIARY_RIYAD_BANK_BENFICIARY"/>
-          <include name="MONEY_TRANSFER_BTWEEN_ACCOUNTS"/>
-          <include name="ACCOUNTS_AND_CARDS_WAZEN_ACCOUNT_CHECK_DETAILS"/>
-          <include name="MONEY_TRANSFER_MONEY_EXPRESS"/>
-          <include name="ACCOUNTS_AND_CARDS_CREDIT_CARD_STOP_CARD"/>
-          <include name="ACCOUNTS_AND_CARDS_NET_WORTH_STATMENET_CHECK_CHARTS"/>
-          <include name="MONEY_TRANSFER_REQUEST_TO_PAY"/>
+          <include name="LOGIN"/>
           <include name="BeforeSuite"/>
           <include name="BeforeClass"/>
-          <include name="ADD_NEW_BENFICIARY_MONEY_EXPRESS_BENFICIARY"/>
-          <include name="GOVERMENT_PAYMENT_ADD_BILL"/>
           <include name="BeforeMethod"/>
           <include name="AfterSuite"/>
-          <include name="MONEY_TRANSFER_WU_TRANSFER"/>
-          <include name="ADD_NEW_BENFICIARY_LOCAL_BENFICIARY"/>
-          <include name="APPLY_ONLINE_OPEN_SAVING_ACCOUNT_WITHOUT_INCOME"/>
-          <include name="GOVERMENT_PAYMENT_PAY_BILL"/>
-          <include name="APPLY_ONLINE_APPLY_FOR_WAZEN"/>
-          <include name="APPLY_ONLINE_APPLY_FOR_CREDIT_CARD"/>
-          <include name="APPLY_ONLINE_OPEN_CURRENT_ACCOUNT"/>
-          <include name="MONEY_TRANSFER_INTERNATIONAL_TRANSFER"/>
-          <include name="ACCOUNTS_AND_CARDS_CREDIT_CARD_TRANSFER_CARD"/>
-          <include name="HASSAD_PROGRAM_TRANSFER"/>
         </methods>
-      </class> <!-- P01_Testcases.Regression -->
+      </class> <!-- P01_Testcases.Tasks -->
     </classes>
   </test> <!-- Android(failed) -->
 </suite> <!-- Failed suite [RMOB] -->

@@ -17,10 +17,10 @@ public class MoneyTransferScreen extends Base {
 	// MONEY TRANSFER SCREEN VARIABLES
 	String BUTTON_Confirm2 = "//android.widget.Button[@text = 'Confirm arrow round-forward']";
 	String BUTTON_NewRequest  = "//android.widget.Button[@index= '1']";
-	String BUTTON_RequestToPay = "//android.widget.Button[@index= '21']";
+	String BUTTON_RequestToPay = "//android.widget.Button[@index= '23']";
 	String BUTTON_AddNewBenf = "//android.widget.Button[@text= 'Add New Beneficiary']";
 	String BUTTON_BenficiaryManagement = "//android.widget.Button[@index= '19']";
-	String BUTTON_Zakaty = "//android.widget.Button[@index= '17']";
+	String BUTTON_Zakaty = "//android.widget.Button[@index= '19']";
 	String BUTTON_CharityDonation = "(//android.widget.Button[@index= '15']) [1]";
 	String CHECKBOX = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[1]/android.widget.TextView";
 	String BUTTON_MoneyExpress = "//android.widget.Button[@index= '11']";

@@ -162,12 +162,7 @@ public class ApplyOnlineScreen extends Base{
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(CHECKBOX)).click();
-		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-		driver.findElement(By.xpath(BUTTON_AddAccount)).click();
-		
-		Methods.Get_OTP();
-	
+			
 	}
 	// ============================================================================
 
@@ -655,11 +650,6 @@ public class ApplyOnlineScreen extends Base{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
 			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(BUTTON_Confirm)).click();
-			
-			Methods.Get_OTP();
-
 			try {
 				
 				Methods.MW_PopUps();

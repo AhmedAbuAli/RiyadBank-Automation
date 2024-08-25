@@ -1,13 +1,15 @@
 # RiyadBank-Automation
 
+## To Run script ( Ctrl + 1 )
+
 ## - TO SKIP ANY METHOD JUST CALL THE FOLLOWING
 
 ```java
-Data.Set_Methode_Status(Row Number , Method Name , "SKIP"); \
+Data.Set_Methode_Status(Row Number , Method Name , "SKIP");\
 Base.Skip_Method();  
 ```
 
-## - DONE SCRIPTS
+## - DONE SCRIPTS ( RMOB )
 
 01 - LOGIN \
 02 - ACCOUNT IDENTIFIER MANGAMENET SERVICE - LINK MY ACCOUNT \
@@ -58,7 +60,7 @@ Base.Skip_Method();
 48 - HASSAD TRANSFER ( REVIEW BEFORE ADDING )\
 49 - TIME DEPOSIT \
 50 - APPLY ONLINE - APPLY FOR PERSONAL LOAN (User : 12334059)\
-51 - ACCOUNTS AND CARDS - REFINANCE (User : 12334059) \
+51 - ACCOUNTS AND CARDS - REFINANCE (User : 12334059)\
 
 ### - TEMPLETE FOR ANY FUNCTION
 

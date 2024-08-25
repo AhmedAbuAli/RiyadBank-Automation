@@ -90,11 +90,15 @@ public class InvestmentScreen extends Base{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Arrow)).click();
 			
+			/* 
 			String Selected_Option = Methods.Choose_List(Companies, "Company", "Please select a company to continue ");
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("//android.widget.TextView[@text = '"+Selected_Option+"']")).click();
-			
+			*/
+
+			Thread.sleep(10000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CheckBox)).click();
 			
@@ -107,9 +111,10 @@ public class InvestmentScreen extends Base{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Save)).click();
 
+			/* 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).click();
-		
+		*/
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).sendKeys("10");
 			

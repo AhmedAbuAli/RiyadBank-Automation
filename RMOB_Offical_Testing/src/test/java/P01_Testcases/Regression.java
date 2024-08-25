@@ -58,303 +58,413 @@ public class Regression extends Base {
 	
 	@Test 
 	(priority = 1)
-	public void START_AND_LOGIN() throws IOException, InterruptedException   {
-		String Method_Name = "LOGIN";
-		Login.Login(Method_Name , 3);
+	public void LOGIN() throws IOException, InterruptedException   {
+
+		Login.Login("Login" , 3);
+		
+	}
+
+	@Test  
+	(priority = 2)
+	public void CHECK_ACCOUNT_DETAILS() throws IOException, InterruptedException   {
+
+		Account.Check_Account_Details("Check account details", 4);
+
 	}
 
 	@Test 
-	(priority = 2)
-	public void ACCOUNTS_AND_CARDS_CHECK_ACCOUNT_DETAILS() throws IOException, InterruptedException   {
-		Account.Check_Account_Details("ACCOUNTS AND CARDS - CHECK ACCOUNT DETAILS", 4);
-	}
-	
-	@Test 
 	(priority = 3)
-	public void ACCOUNTS_AND_CARDS_DEBIT_CARD_EDIT_POS_LIMIT() throws IOException, InterruptedException   {
-		Account.Edit_POS_Limit("ACCOUNTS AND CARDS - DEBIT CARD - EDIT POS LIMIT", 5);
+	public void DEBIT_CARD_EDIT_POS_LIMIT() throws IOException, InterruptedException   {
+
+		Account.Edit_POS_Limit("Edit POS limit", 5);
+	
 	}
 
 	@Test 
 	(priority = 4)
-	public void ACCOUNTS_AND_CARDS_DEBIT_CARD_DEACTIVE_ACTIVE_CONTACTLESS() throws IOException, InterruptedException   {
-		Account.Deactive_Active_Contactless("ACCOUNTS AND CARDS - DEBIT CARD - DEACTIVE & ACTIVE CONTACTLESS", 6);
-	}
+	public void DEBIT_CARD_DEACTIVE_ACTIVE_CONTACTLESS() throws IOException, InterruptedException   {
+
+		Account.Deactive_Active_Contactless("Deactive or active contactless", 6);
 	
+	}
+
 	@Test 
 	(priority = 5)
-	public void ACCOUNTS_AND_CARDS_DEBIT_CARD_DEACTIVE_ACTIVE_ONLINE_PURCHASING() throws IOException, InterruptedException   {
-		Account.Deactive_Active_Online_Purchasing("ACCOUNTS AND CARDS - DEBIT CARD - DEACTIVE & ACTIVE ONLINE PURCHASING", 7);
+	public void DEBIT_CARD_DEACTIVE_ACTIVE_ONLINE_PURCHASING() throws IOException, InterruptedException   {
+
+		Account.Deactive_Active_Online_Purchasing("Deactive or active online purchasing", 7);
+
 	}
 
 	@Test 
 	(priority = 6)
-	public void ACCOUNTS_AND_CARDS_DEBIT_CARD_SHOW_CARD_PIN() throws IOException, InterruptedException   {
-		Account.Show_Card_Pin("ACCOUNTS AND CARDS - DEBIT CARD SHOW CARD PIN", 8);
+	public void DEBIT_CARD_SHOW_CARD_PIN() throws IOException, InterruptedException   {
+
+		Account.Show_Card_Pin("Show card pin", 8);
+
 	}
 	
-    @Test 
+	@Test 
 	(priority = 7)
-    public void ACCOUNTS_AND_CARDS_CREDIT_CARD_CHECK_CARD_DETAILS() throws IOException, InterruptedException   {
-		Account.Check_Credit_Card_Details("ACCOUNTS AND CARDS - CREDIT CARD - CHECK CARD DETAILS", 9);
+    public void CREDIT_CARD_CHECK_CARD_DETAILS() throws IOException, InterruptedException   {
+
+		Account.Check_Credit_Card_Details("Check credit card details", 9);
+
 	}
 
 	@Test 
 	(priority = 8)	
-	public void ACCOUNTS_AND_CARDS_CREDIT_CARD_LOAD_CARD() throws IOException, InterruptedException   {
-		Account.Load_Credit_Card("ACCOUNTS AND CARDS - CREDIT CARD - LOAD CARD", 10);
+	public void CREDIT_CARD_LOAD_CARD() throws IOException, InterruptedException   {
+
+		Account.Load_Credit_Card("Load or Pay credit card", 10);
+
 	}
 	
 	@Test 
 	(priority = 9)
-	public void ACCOUNTS_AND_CARDS_CREDIT_CARD_TRANSFER_CARD() throws IOException, InterruptedException   {
-		Account.Transfer_Credit_Card("ACCOUNTS AND CARDS - CREDIT CARD - TRANSFER CARD", 11);
+	public void CREDIT_CARD_TRANSFER_CARD() throws IOException, InterruptedException   {
+
+		Account.Transfer_Credit_Card("Transfer from credit card", 11);
+
 	}
-	
+
 	@Test 
 	(priority = 10)
-	public void ACCOUNTS_AND_CARDS_MULTI_CURRENCY_CHECK_DETAILS() throws IOException, InterruptedException   {
-		Account.Check_Multi_Currency_Details("ACCOUNTS AND CARDS - MULTI CURRENCY -  CHECK DETAILS", 12);
+	public void MULTI_CURRENCY_CHECK_DETAILS() throws IOException, InterruptedException   {
+
+		Account.Check_Multi_Currency_Details("Check multi currency card details", 12);
+
 	}
-	
 
 	@Test 
 	(priority = 11)
-	public void ACCOUNTS_AND_CARDS_MULTI_CURRENCY_LOAN_MONEY() throws IOException, InterruptedException   {
-		Account.Loan_Money("ACCOUNTS AND CARDS - MULTI CURRENCY -  LOAN MONEY", 13);
+	public void MULTI_CURRENCY_LOAN_MONEY() throws IOException, InterruptedException   {
+
+		Account.Loan_Money("Loan money to multi currency card", 13);
+
 	}
-	
+
 	@Test 
 	(priority = 12)
-	public void ACCOUNTS_AND_CARDS_WAZEN_ACCOUNT_PASUSE_RESUME() throws IOException, InterruptedException   {
-		Account.Wazen_Accounts_Pause_Resume("ACCOUNTS AND CARDS - WAZEN ACCOUNTS -  PUASE & RESUME ACCOUNT", 14);
+	public void WAZEN_ACCOUNT_PASUSE_RESUME() throws IOException, InterruptedException   {
+
+		Account.Wazen_Accounts_Pause_Resume("Pause or resume wazin account", 14);
+
 	}
-	
+
 	@Test 
 	(priority = 13)
-	public void ACCOUNTS_AND_CARDS_NET_WORTH_STATMENET_CHECK_CHARTS() throws IOException, InterruptedException   {
-		Account.Chcek_Net_Worth_Statment("ACCOUNTS AND CARDS - NET WORTH STATMENT -  CHECK CHARTS", 15);
+	public void NET_WORTH_STATMENET_CHECK_CHARTS() throws IOException, InterruptedException   {
+
+		Account.Chcek_Net_Worth_Statment("Check net worth statment chasrts", 15);
+		
 	}
-	
+
 	@Test 
 	(priority = 14)
-	public void ACCOUNTS_AND_CARDS_WAZEN_ACCOUNT_CHECK_DETAILS() throws IOException, InterruptedException   {
-		Account.Check_Wazen_Accounts_Details("ACCOUNTS AND CARDS - WAZEN ACCOUNTS -  CHECK DETAILS ", 16);
+	public void WAZEN_ACCOUNT_CHECK_DETAILS() throws IOException, InterruptedException   {
+
+		Account.Check_Wazen_Accounts_Details("Check wazin account details ", 16);
+
+	}
+
+	@Test 
+	(priority = 15)
+	public void BTWEEN_ACCOUNTS_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Between_My_Accounts("Between my account transfer", 17);
+		
+	}
+
+	@Test 
+	(priority = 16)
+	public void WITHIN_RIYAD_BANK_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Within_Riyad_Bank("Within riyad bank trnasfer", 18);
+
 	}
 
 	@Test 
 	(priority = 17)
-	public void MONEY_TRANSFER_BTWEEN_ACCOUNTS() throws IOException, InterruptedException   {
-		MoneyTransfer.Between_My_Accounts("MONEY TRANSFER - BETWEEN MY ACCOUNTS", 19);
+	public void LOCAL_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Local_Transfer("Local transfer", 19);
+
 	}
 
 	@Test 
 	(priority = 18)
-	public void MONEY_TRANSFER_WITHIN_RIYAD_BANK() throws IOException, InterruptedException   {
-		MoneyTransfer.Within_Riyad_Bank("MONEY TRANSFER - WITHIN RIYAD BANK", 20);
+	public void INTERNATIONAL_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.International_Transfer("International transfer", 20);
+
 	}
 
 	@Test 
 	(priority = 19)
-	public void MONEY_TRANSFER_LOCAL_TRANSFER() throws IOException, InterruptedException   {
-		MoneyTransfer.Local_Transfer("MONEY TRANSFER - LOCAL TRANSFER", 21);
+	public void WU_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.WU_Transfer("WU transfer", 21);
+
 	}
 
 	@Test 
 	(priority = 20)
-	public void MONEY_TRANSFER_INTERNATIONAL_TRANSFER() throws IOException, InterruptedException   {
-		MoneyTransfer.International_Transfer("MONEY TRANSFER - INTERNATIONAL TRANSFER", 22);
+	public void MONEY_EXPRESS_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Money_Express("Money express transfer", 22);
+
 	}
-	
+
 	@Test 
 	(priority = 21)
-	public void MONEY_TRANSFER_WU_TRANSFER() throws IOException, InterruptedException   {
-		MoneyTransfer.WU_Transfer("MONEY TRANSFER - WU TRANSFER", 23);
-	}
+	public void CHARITY_DONATION_TRANSFER() throws IOException, InterruptedException   {
+		
+		MoneyTransfer.Charity_Donation("Charity donation transfer", 23);
 	
+	}
+
 	@Test 
 	(priority = 22)
-	public void MONEY_TRANSFER_MONEY_EXPRESS() throws IOException, InterruptedException   {
-		MoneyTransfer.Money_Express("MONEY TRANSFER - MONEY EXPRESS", 24);
+	public void ZAKATY_TRANSFER() throws IOException, InterruptedException   {
+
+		MoneyTransfer.Zakaty("Zakaty transfer", 24);
+	
 	}
 
 	@Test 
 	(priority = 23)
-	public void MONEY_TRANSFER_WITHIN_CHARITY_DONATION() throws IOException, InterruptedException   {
-		MoneyTransfer.Charity_Donation("MONEY TRANSFER - CHARITY DONATION", 25);
+	public void REQUEST_TO_PAY() throws IOException, InterruptedException   {
+		
+		MoneyTransfer.Request_To_Pay("request to pay transfer", 25);
+
 	}
-	
+
 	@Test 
 	(priority = 24)
-	public void MONEY_TRANSFER_ZAKATY() throws IOException, InterruptedException   {
-		MoneyTransfer.Zakaty("MONEY TRANSFER - ZAKATY", 26);
+	public void LINK_MY_ACCOUNT() throws IOException, InterruptedException   {
+
+		AccountIM.link_My_Account("Link my account", 26);
+
 	}
-	
+
 	@Test 
 	(priority = 25)
-	public void MONEY_TRANSFER_REQUEST_TO_PAY() throws IOException, InterruptedException   {
-		MoneyTransfer.Request_To_Pay("MONEY TRANSFER - REQUEST TO PAY", 27);
+	public void UNLINK_MY_ACCOUNT() throws IOException, InterruptedException   {
+
+		AccountIM.UnLink_My_Account("Unlink my account", 27);
+
 	}
 
 	@Test 
 	(priority = 26)
-	public void ACCOUNT_IDENTIFIER_MANGAMENET_SERVICE_LINK_MY_ACCOUNT() throws IOException, InterruptedException   {
-		AccountIM.link_My_Account("ACCOUNT IDENTIFIER MANGAMENET SERVICE - LINK MY ACCOUNT ", 28);
-	}
-	
-	@Test 
-	(priority = 27)
-	public void ACCOUNT_IDENTIFIER_MANGAMENET_SERVICE_UNLINK_MY_ACCOUNT() throws IOException, InterruptedException   {
-		AccountIM.UnLink_My_Account("ACCOUNT IDENTIFIER MANGAMENET SERVICE - UNLINK MY ACCOUNT ", 29);
-	}
-		
-	@Test 
-	(priority = 28)
-	public void APPLY_ONLINE_OPEN_CURRENT_ACCOUNT() throws IOException, InterruptedException   {
-		Apply.Open_Account("APPLY ONLINE - OPEN CURRECNT ACCOUNT", 30);
-	}
-		
-	@Test 
-	(priority = 29)
-	public void APPLY_ONLINE_OPEN_SAVING_ACCOUNT_WITHOUT_INCOME() throws IOException, InterruptedException   {
-		Apply.Open_Account("APPLY ONLINE - OPEN SAVING ACCOUNT WITHOUT INCOME", 31);
-	}
-	
-	@Test 
-	(priority = 30)
-    public void APPLY_ONLINE_OPEN_SAVING_ACCOUNT_WITH_INCOME() throws IOException, InterruptedException   {
-		Apply.Open_Account("APPLY ONLINE - OPEN SAVING ACCOUNT WITH INCOME", 32);
+	public void OPEN_CURRENT_ACCOUNT() throws IOException, InterruptedException   {
+
+		Apply.Open_Account("Open current account", 28);
+
 	}
 
 	@Test 
-	(priority = 31)
-	public void APPLY_ONLINE_APPLY_FOR_CREDIT_CARD() throws IOException, InterruptedException   {
-		Apply.Create_Credit_Card("APPLY ONLINE - APPLY FOR CREDIT CARD", 33);
+	(priority = 27)
+	public void OPEN_SAVING_ACCOUNT_WITHOUT_INCOME() throws IOException, InterruptedException   {
+
+		Apply.Open_Account("Open saving account without income", 29);
+
+	}
+
+	@Test 
+	(priority = 28)
+	public void OPEN_SAVING_ACCOUNT_WITh_INCOME() throws IOException, InterruptedException   {
+
+		Apply.Open_Account("Open saving account with income", 30);
+
+	}
+
+	@Test 
+	(priority = 29)
+	public void APPLY_FOR_CREDIT_CARD() throws IOException, InterruptedException   {
+
+		Apply.Create_Credit_Card("Apply for a credit card", 31);
+	
+	}
+
+	@Test 
+	(priority = 30)
+	public void APPLY_FOR_TOKEN () throws IOException, InterruptedException   {
+
+		Data.Set_Methode_Status(32 , "Apply for a token" , "SKIP");
+		Base.Skip_Method();	
+
 	}
 	
 	@Test 
-	(priority = 32)
-	public void TOKEN_PROGRAM_APPLY_FOR_TOKEN () throws IOException, InterruptedException   {
-		Data.Set_Methode_Status(34 , "TOKEN PROGRAM - APPLY FOR A TOKEN " , "NOT APPLICABLE");
+	(priority = 31)
+	public void APPLY_FOR_VIRTUAL_CARD() throws IOException, InterruptedException   {	
+
+		Data.Set_Methode_Status(33 , "Apply for a virtual card" , "SKIP");
 		Base.Skip_Method();	
+
+	}
+
+	@Test 
+	(priority = 32)
+	public void APPLY_FOR_PREPAID_CARD() throws IOException, InterruptedException   {
+		
+		Apply.Creat_Prepaid_Card("Apply for a pre-paid", 33);
+	
 	}
 
 	@Test 
 	(priority = 33)
-	public void APPLY_ONLINE_APPLY_FOR_VIRTUAL_CARD() throws IOException, InterruptedException   {	
-		Data.Set_Methode_Status(35 , "APPLY ONLINE - APPLY FOR VIRTUAL CARD" , "NOT APPLICABLE");
+	public void APPLY_FOR_SALARY_CARD() throws IOException, InterruptedException   {
+
+		Data.Set_Methode_Status(35 , "Apply for a salary card" , "SKIP");
 		Base.Skip_Method();	
+
 	}
-	
+
 	@Test 
 	(priority = 34)
-	public void APPLY_ONLINE_APPLY_FOR_PREPAID_CARD() throws IOException, InterruptedException   {
-		Apply.Creat_Prepaid_Card("APPLY ONLINE - APPLY FOR PREPAID CARD", 36);
+	public void APPLY_FOR_MULTI_CURRENCY_CARD() throws IOException, InterruptedException   {
+	
+		Apply.Creat_Multi_Currency_Card("Apply for a multi currency card", 36);
+	
 	}
 
 	@Test 
 	(priority = 35)
-	public void APPLY_ONLINE_APPLY_FOR_SALARY_CARD() throws IOException, InterruptedException   {
-		Data.Set_Methode_Status(37 , "APPLY ONLINE - APPLY FOR SALARY CARD" , "NOT APPLICABLE");
-		Base.Skip_Method();	
+	public void APPLY_FOR_WAZEN() throws IOException, InterruptedException   {
+
+		Apply.Creat_Wazen("Apply for wazen", 37);
+
 	}
-	
+
 	@Test 
 	(priority = 36)
-	public void APPLY_ONLINE_APPLY_FOR_MULTI_CURRENCY_CARD() throws IOException, InterruptedException   {
-		Apply.Creat_Multi_Currency_Card("APPLY ONLINE - APPLY FOR MULTI CURRENCY CARD", 38);
-	}
+	public void ADD_RIYAD_BANK_BENFICIARY() throws IOException, InterruptedException   {
+		
+		AddNewBenf.Riyad_Bank_Benf("Add riyad bank beneficiary", 38);
 	
+	}
+
 	@Test 
 	(priority = 37)
-	public void APPLY_ONLINE_APPLY_FOR_WAZEN() throws IOException, InterruptedException   {
-		Apply.Creat_Wazen("APPLY ONLINE - APPLY FOR WAZEN", 39);
-	}
+	public void ADD_LOCAL_BENFICIARY() throws IOException, InterruptedException   {
 	
+		AddNewBenf.Local_Bank_Benf("Add local beneficiary", 39);
+	
+	}
+
 	@Test 
 	(priority = 38)
-	public void ADD_NEW_BENFICIARY_RIYAD_BANK_BENFICIARY() throws IOException, InterruptedException   {
-		AddNewBenf.Riyad_Bank_Benf("ADD NEW BENFICIARY - RIYAD BANK BENFICIARY", 40);
+	public void ADD_INTERNATIONAL_BENFICIARY() throws IOException, InterruptedException   {
+
+		AddNewBenf.International_Bank_Benf("Add international beneficiary", 40);
+
 	}
-	
+
 	@Test 
 	(priority = 39)
-	public void ADD_NEW_BENFICIARY_LOCAL_BENFICIARY() throws IOException, InterruptedException   {
-		AddNewBenf.Local_Bank_Benf("ADD NEW BENFICIARY - LOCAL BANK BENFICIARY", 41);
+	
+	public void ADD_MONEY_EXPRESS_BENFICIARY() throws IOException, InterruptedException   {
+
+		AddNewBenf.Money_Express_Benf("Add money express beneficiary", 41);
+	
 	}
 
 	@Test 
 	(priority = 40)
-	public void ADD_NEW_BENFICIARY_INTERNATIONAL_BENFICIARY() throws IOException, InterruptedException   {
-		AddNewBenf.International_Bank_Benf("ADD NEW BENFICIARY - INTERNATIONAL BANK BENFICIARYY", 42);
-	}
+	public void CREDIT_CARD_STOP_CARD() throws IOException, InterruptedException   {
+
+		Account.Stop_Card("Stop credit card", 42);
 	
+	}
+
 	@Test 
 	(priority = 41)
+	public void DEBIT_CARD_STOP_CARD() throws IOException, InterruptedException   {
+		
+		Account.Stop_Temporary("Stop credit card", 43);
 	
-	public void ADD_NEW_BENFICIARY_MONEY_EXPRESS_BENFICIARY() throws IOException, InterruptedException   {
-		AddNewBenf.Money_Express_Benf("ADD NEW BENFICIARY -  MONEY EXPRESS BENFICIARY", 43);
 	}
-	
+
 	@Test 
 	(priority = 42)
-	public void ACCOUNTS_AND_CARDS_CREDIT_CARD_STOP_CARD() throws IOException, InterruptedException   {
-		Account.Stop_Card("ACCOUNTS AND CARDS - CREDIT CARD - STOP CARD", 44);
+	public void PERSONAL_FINANCE_MANAGEMENT_CHECK_ACTIVITY() throws IOException, InterruptedException   {
+		
+		PMF.PFM_Check_Activity("Check personal finance mangement details", 44);
+
 	}
 	
 	@Test 
 	(priority = 43)
-	public void ACCOUNTS_AND_CARDS_DEBIT_CARD_STOP_CARD() throws IOException, InterruptedException   {
-		Account.Stop_Temporary("ACCOUNTS AND CARDS - DEBIT CARD - STOP CARD", 45);
+	public void INSURANCE_CHECK_MOTOR_INSURANCE_DETAILS() throws IOException, InterruptedException   {
+		
+		Apply.Insurance_Motor_Details("Check motor insurance details",45 );
+	
 	}
 
-	@Test 
+	@Test
 	(priority = 44)
-	public void PERSONAL_FINANCE_MANAGEMENT_CHECK_ACTIVITY() throws IOException, InterruptedException   {
-		PMF.PFM_Check_Activity("PERSONAL FINANCE MANAGEMENT - CHECK ACTIVITY ", 45);
-	}
+	public void IPO() throws IOException, InterruptedException {
+
+		Investments.IPO("IPO", 46);
 	
-	@Test 
+	}
+
+	@Test
+	(priority = 45)
+	public void TIME_DEPOSIT() throws IOException, InterruptedException {
+
+		Investments.Time_Deposit("Time deposit", 47);
+
+	}
+
+	@Test
 	(priority = 46)
-	public void INSURANCE_CHECK_MOTOR_INSURANCE_DETAILS() throws IOException, InterruptedException   {
-		Apply.Insurance_Motor_Details("INSURANCE - CHECK MOTOR INSURANCE DETAILS", 48);
-	}
+	public void HASSAD_PROGRAM_TRANSFER() throws IOException, InterruptedException {
 	
+		Hassad.Hassad_Transfer("Transfer hassad points", 48); //  NOT COMPLETED YET 
+	
+	}
+
 	@Test
 	(priority = 47)
-	public void INVESTMENTS_IPO() throws IOException, InterruptedException {
-		Investments.IPO("INVETMENTS - IPO", 49);
+	public void ADD_BILL() throws IOException, InterruptedException {
+
+		BillsGovermentPayment.Add_New_Bill("Add a bill", 49);
+	
 	}
 	
 	@Test
 	(priority = 48)
-	public void INVESTMENTS_TIME_DEPOSIT() throws IOException, InterruptedException {
-		Investments.Time_Deposit("INVETMENTS - TIME DEPOSIT", 50);
+	public void PAY_BILL() throws IOException, InterruptedException {
+		BillsGovermentPayment.Pay_Bill("Pay a bill", 50);
 	}
-	
-	@Test
+
+	@Test 
 	(priority = 49)
-	public void HASSAD_PROGRAM_TRANSFER() throws IOException, InterruptedException {
-		Hassad.Hassad_Transfer("HASSAD PROGRAM - TRANSFER", 51);
+	public void APPLY_FOR_PERSONAL_LOAN() throws IOException, InterruptedException   {
+		
+		Apply.Apply_Personal_Loan("Apply for personal loan ",51 );
+
 	}
-	
-	@Test
+
+	@Test 
 	(priority = 50)
-	public void GOVERMENT_PAYMENT_ADD_BILL() throws IOException, InterruptedException {
-		BillsGovermentPayment.Add_New_Bill("BILLS & GOVERMENT PAYMENT - ADD BILL", 52);
-	}
+	public void REFINANCE() throws IOException, InterruptedException   {
+
+		Account.Refinance("Refinance", 52);
 	
+	}
+
 	@Test
 	(priority = 51)
-	public void GOVERMENT_PAYMENT_PAY_BILL() throws IOException, InterruptedException {
-		BillsGovermentPayment.Pay_Bill("BILLS & GOVERMENT PAYMENT - PAY BILL", 53);
-	}
-	
-	@Test
-	(priority = 55)
 	public void LOGOUT() throws IOException, InterruptedException {
-		Logout.Logout("LOGOUT", 57);
-	}	
+
+		Logout.Logout("Logout", 53);
+
+	}
 	
 
 }

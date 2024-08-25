@@ -98,6 +98,10 @@ public class AccountCardsScreen extends Base {
 	String BUTTON_Calculate = "//android.widget.Button[@text = 'Calculate']";
 	String uiSelector9 = "new UiSelector().textMatches(\"" +"Continue arrow round-forward"+ "\")";
 	String command9 = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector9 + ");";
+	String uiSelector4 = "new UiSelector().textMatches(\"" +"Change PIN"+ "\")";
+	String command4 = "new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView("+ uiSelector4 + ");";
+
+
 
 	KeyEvent keyEvent0 = new KeyEvent(AndroidKey.DIGIT_0);
     KeyEvent keyEvent1 = new KeyEvent(AndroidKey.DIGIT_1);
@@ -149,12 +153,11 @@ public class AccountCardsScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(AppiumBy.androidUIAutomator(command));
 						
-			Base.Take_SscreenShot(RportName , "CHECK ACCOUNT DETAILS TEST IS PASSED");
+			Base.Take_SscreenShot(RportName , "");
 			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 
 		} catch (Exception e) {
 
-			Base.Take_SscreenShot_Fail(RportName , " ERROR IN CHECK ACCOUNT DETAILS TEST" + '\n' +e);
 			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
 		}
 
@@ -495,6 +498,11 @@ public class AccountCardsScreen extends Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_DebitCards)).click();
 
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		driver.findElement(AppiumBy.androidUIAutomator(command4));
+
+
+
 	}
 	
 	public void Edit_POS_Limit(String RportName , int RowNumeber) throws IOException, InterruptedException {
@@ -670,18 +678,27 @@ public class AccountCardsScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_BankToDetails)).click();
 			
-			Base.Take_SscreenShot(RportName , "DEACTIVE & ACTIVE ONLINE PURCHASING TEST IS PASSED");
-			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			Methods.Back_To_Home_Screen();
-			
-			
-		} catch (Exception e) {
+			try {
 
-			Base.Take_SscreenShot_Fail(RportName , " ERROR IN DEACTIVE & ACTIVE ONLINE PURCHASING TEST" + '\n' +e);
-			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
-			Methods.Back_To_Home_Screen();
-		}
-	}
+				Methods.MW_PopUps();
+				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			 
+			   } catch (Exception e) {
+			 
+				Base.Take_SscreenShot(RportName ,  RportName + " ");
+				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+			 
+			   } 
+			 
+			  } catch (Exception e) {
+			 
+			   Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			 
+			  }
+			  
+			  Methods.Back_To_Home_Screen();
+			  
+			 }
 
 	public void Show_Card_Pin(String RportName , int RowNumeber) throws IOException, InterruptedException {
 
@@ -955,7 +972,7 @@ public class AccountCardsScreen extends Base {
 
 			} catch (Exception e) {
 
-				Base.Take_SscreenShot(RportName ,  RportName + "TEST IS PASSED");
+				Base.Take_SscreenShot(RportName ,  RportName + "");
 				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
 			}
 
