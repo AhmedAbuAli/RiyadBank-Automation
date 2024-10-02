@@ -11,8 +11,6 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
-import org.asynchttpclient.util.HttpConstants.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.interactions.Pause;
@@ -303,7 +301,7 @@ public class CommenMethods extends Base {
 
 	public void ChcekResult(String RportName , int RowNumeber) throws IOException, InterruptedException{
 
-		
+
 			if (CheckElement(BUTTON_HomePage)) {
 				
 				Base.Take_SscreenShot(RportName ,  RportName + "");
