@@ -22,7 +22,7 @@ public class MoneyTransferScreen extends Base {
 	String BUTTON_BenficiaryManagement = "//android.widget.Button[@index= '19']";
 	String BUTTON_Zakaty = "//android.widget.Button[@index= '19']";
 	String BUTTON_CharityDonation = "(//android.widget.Button[@index= '15']) [1]";
-	String CHECKBOX = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.view.View[1]/android.widget.TextView";
+	String CHECKBOX = "//android.widget.CheckBox";
 	String BUTTON_MoneyExpress = "//android.widget.Button[@index= '11']";
 	String INPUT_Ammount3 = "(//android.widget.EditText) [2]";
 	String INPUT_Ammount2 = "(//android.widget.EditText) [1]";
@@ -31,7 +31,7 @@ public class MoneyTransferScreen extends Base {
 	String BITTON_InternationalTransfer = "//android.widget.Button[@index= '7']";
 	String BUTTON_Now = "//android.widget.TextView[@text = 'Now']";
 	String BUTTON_LocalTransfer = "//android.widget.Button[@index= '5']";
-	String BUTTON_PurposeOption = "//android.widget.TextView[@text = 'Personal expenses']";
+	String BUTTON_PurposeOption = "//android.widget.TextView[@text = 'Personal Expenses']";
 	String BUTTON_PurposeOption2 = "//android.widget.TextView[@text = 'Family Support']";
 	String BUTTON_PurposeList = "//android.widget.TextView[@text = 'Select main purpose']";
 	String BUTTON_BenfOption = "(//android.widget.TextView[@text[contains(.,'Riyad Bank ')]]) [1]";
@@ -47,6 +47,7 @@ public class MoneyTransferScreen extends Base {
 	String BUTTON_BtweenMyAccounts = "//android.widget.Button[@index= '1']";
 	String BUTTON_MoneyTransfer  = "//android.widget.Button[@text =' Money Transfers']";
 	String BUTTON_BenfOption2 = "lbl-30";
+	String RADIO_When = "//android.widget.RadioButton[contains(@text, 'Now')]";
 	
 	// GENERAL VARIABLES
 	CommenMethods Methods = new CommenMethods();
@@ -101,20 +102,16 @@ public class MoneyTransferScreen extends Base {
 
 		}
 		
-		try {
-
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		if (Methods.CheckElement(CHECKBOX)) {
 			driver.findElement(By.xpath(CHECKBOX)).click();
 
-		} catch (Exception e) {
-
-			// DO NOTHING
-
+			
 		}
-		
+
+		Thread.sleep(5000);
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		driver.findElement(By.xpath(BUTTON_Transfer2)).click();
-		Base.Take_SscreenShot(RportName , "");
 		
 		Methods.Get_OTP();
 	}
@@ -140,7 +137,8 @@ public class MoneyTransferScreen extends Base {
 
 			Open_Money_Transfer();
 			
-			
+			Thread.sleep(3000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_BtweenMyAccounts)).click();
 			
@@ -156,32 +154,20 @@ public class MoneyTransferScreen extends Base {
 			
 			Methods.action_clickOnPosition(950, 2260);
 
-			
+			Thread.sleep(2000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Continue2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
+			Thread.sleep(2000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Transfer2)).click();
-			Base.Take_SscreenShot(RportName , "");
 			
 			Methods.Get_OTP();
-			
-			try {
 
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-				Methods.Back_To_Home_Screen();
+			Thread.sleep(10000);
 
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-				
-			}
 
 		} catch (Exception e) {
 
@@ -225,29 +211,14 @@ public class MoneyTransferScreen extends Base {
 			Methods.action_clickOnPosition(950, 2260);
 			
 			Confirm_Transfer(RportName);
-			
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 			Methods.Back_To_Home_Screen();
 
-		}
+		}		
 	}
 	// ============================================================================
 
@@ -281,36 +252,24 @@ public class MoneyTransferScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Beneficiary)).click();
 
-			
 			Thread.sleep(5000);
 			
 			Methods.action_clickOnPosition(500, 1550);
+
+			Thread.sleep(5000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(RADIO_When)).click();
 			
 			Confirm_Transfer(RportName);
-
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 			Methods.Back_To_Home_Screen();
 
-		}
+		}		
 	}
 	// ============================================================================
 
@@ -345,34 +304,21 @@ public class MoneyTransferScreen extends Base {
 			Thread.sleep(2000);
 			
 			Methods.action_clickOnPosition(950, 2260);
+
+			Thread.sleep(5000);
+
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(RADIO_When)).click();
 			
 			Confirm_Transfer(RportName);
-
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 			Methods.Back_To_Home_Screen();
 
-		}
-
+		}		
 	}
 	// ============================================================================
 
@@ -415,30 +361,14 @@ public class MoneyTransferScreen extends Base {
 			driver.navigate().back();
 			
 			Confirm_Transfer(RportName);
-			
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
-
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + " ");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
-			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
 			Methods.Back_To_Home_Screen();
 
-		}
-
+		}		
 	}
 	// ============================================================================
 
@@ -475,33 +405,16 @@ public class MoneyTransferScreen extends Base {
 			driver.navigate().back();
 			
 			Confirm_Transfer(RportName);
-					
-			try {
-				
-				Methods.MW_PopUps();
 
-				Base.Take_SscreenShot_Fail(RportName ,  " ERROR " + RportName +  " TEST ");
+			Methods.ChcekResult(RportName, RowNumeber);
+
+		}	catch (Exception e) {
+
 				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
 				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + " ");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
+	
 			}	
-
-		} catch (Exception e) {
-			
-			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			Methods.Back_To_Home_Screen();
-
-		}
-
+	
 	}
 	// ============================================================================
 

@@ -11,6 +11,8 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import org.asynchttpclient.util.HttpConstants.Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.interactions.Pause;
@@ -104,45 +106,38 @@ public class CommenMethods extends Base {
 	}
 	
 	public void Back_To_Home_Screen() throws IOException, InterruptedException {
-		
-		try {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-			driver.findElement(By.xpath(BUTTON_HomePage)).click();
-			
 
-		} catch (Exception e) {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		if (CheckElement(VIEW_Hello)) {
+			
+			if (CheckElement(BUTTON_OK)) {
+				MW_PopUps();
+			}
+			
+		} else if  (CheckElement(BUTTON_HomePage)){
+			
+			driver.findElement(By.xpath(BUTTON_HomePage)).click();
+
+		} else if (CheckElement(Back2)) {
+
 			driver.findElement(By.xpath(Back2)).click();
 
-			while (Cond) {
+		}else if (CheckElement(BUTTON_Cancel)){
 
-				try {
-					driver.navigate().back();
-					
-					
-				} catch (Exception j) {
-					driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-					driver.findElement(By.xpath(BUTTON_Cancel)).click();				}
-				try {
-					
-					driver.findElement(By.xpath(VIEW_Hello)).isDisplayed();
-					Cond = false ;
-					MW_PopUps();
-				} catch (Exception k) {
-					// DO NOTHING
-				}
-				
-				try {
-					driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-					driver.findElement(By.xpath(BUTTON_No)).click();
-				} catch (Exception e2) {
-					// DO NOTHING
-				}
+			driver.findElement(By.xpath(BUTTON_Cancel)).click();	
+
+		}else {
+
+			driver.navigate().back();
+
+			if (CheckElement(BUTTON_OK)) {
+				MW_PopUps();
 			}
+
+			Back_To_Home_Screen();
+
 		}
-
 	}
-
+	
 	public void action_clickOnPosition(int pointA_X, int pointA_Y) { 
 		
 	PointerInput finger = new PointerInput(org.openqa.selenium.interactions.PointerInput.Kind.TOUCH, "finger"); 
@@ -296,6 +291,35 @@ public class CommenMethods extends Base {
 
 		    driver.perform(Collections.singletonList(sequence));
 	}
+	
+	public boolean CheckElement( String Element ){
+
+		try {
+			return driver.findElement(By.xpath(Element)).isDisplayed();
+		} catch (Exception e) {
+			return false ;
+		}
 	}
+
+	public void ChcekResult(String RportName , int RowNumeber) throws IOException, InterruptedException{
+
+		
+			if (CheckElement(BUTTON_HomePage)) {
+				
+				Base.Take_SscreenShot(RportName ,  RportName + "");
+				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
+
+			} else {
+
+				MW_PopUps();
+				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			}
+			
+			Back_To_Home_Screen();
+
+		} 
+	
+	}
+
 
 	

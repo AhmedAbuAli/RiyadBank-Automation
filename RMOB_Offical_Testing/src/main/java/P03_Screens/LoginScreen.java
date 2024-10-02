@@ -33,14 +33,14 @@ public class LoginScreen extends Base {
 		"77830909",
 		"50131511", 
 		"88180432",
-		"12334059",
+		"67005851",
 		"99333996" 
 	} ;
 
 
 	public void Login(String RportName , int RowNumeber) throws IOException, InterruptedException  {
 		
-		try {
+		try { 
 			
 			String User = Methods.Choose_List( options ,"Login account" , "Please choose an account to login with" );
 						
@@ -57,7 +57,11 @@ public class LoginScreen extends Base {
 			
 			Methods.Check_Alerts();
 	
-		//	Methods.Get_OTP();
+		try {
+			Methods.Get_OTP();
+		} catch (Exception e) {
+			// DO NOTHING 
+		}
 		
 			try {
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));

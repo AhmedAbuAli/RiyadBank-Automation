@@ -43,7 +43,7 @@ public class Tasks extends Base {
 	MoneyTransferScreen MoneyTransfer  = new MoneyTransferScreen();
 	HassadProgramScreen Hassad = new HassadProgramScreen();
 	AccountCardsScreen Account = new AccountCardsScreen();
-	InvestmentScreen Investment = new InvestmentScreen();
+	InvestmentScreen Investments = new InvestmentScreen();
 	TokenProgramScreen Token = new TokenProgramScreen();
 	ApplyOnlineScreen Apply = new ApplyOnlineScreen();
 	CommenMethods Methods  = new CommenMethods() ; 
@@ -53,17 +53,14 @@ public class Tasks extends Base {
 	Base Base = new Base();
 	Data Data = new Data();
 
+
 	@Test 
 	(priority = 1)
 	public void LOGIN() throws IOException, InterruptedException   {
 
 		Login.Login("Login" , 3);
 		
+
 	}
-
-
-
-
-
 
 }

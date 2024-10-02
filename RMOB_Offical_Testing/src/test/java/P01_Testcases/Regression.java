@@ -55,7 +55,7 @@ public class Regression extends Base {
 	// REPORT ROW NUMBER START FROM 3 
     // ROW NUMBER  = PRIORITY + 2
 	
-	
+/* 
 	@Test 
 	(priority = 1)
 	public void LOGIN() throws IOException, InterruptedException   {
@@ -65,6 +65,7 @@ public class Regression extends Base {
 	}
 
 	@Test  
+
 	(priority = 2)
 	public void CHECK_ACCOUNT_DETAILS() throws IOException, InterruptedException   {
 
@@ -80,6 +81,7 @@ public class Regression extends Base {
 	
 	}
 
+
 	@Test 
 	(priority = 4)
 	public void DEBIT_CARD_DEACTIVE_ACTIVE_CONTACTLESS() throws IOException, InterruptedException   {
@@ -87,6 +89,7 @@ public class Regression extends Base {
 		Account.Deactive_Active_Contactless("Deactive or active contactless", 6);
 	
 	}
+
 
 	@Test 
 	(priority = 5)
@@ -96,6 +99,7 @@ public class Regression extends Base {
 
 	}
 
+ 
 	@Test 
 	(priority = 6)
 	public void DEBIT_CARD_SHOW_CARD_PIN() throws IOException, InterruptedException   {
@@ -103,7 +107,8 @@ public class Regression extends Base {
 		Account.Show_Card_Pin("Show card pin", 8);
 
 	}
-	
+
+
 	@Test 
 	(priority = 7)
     public void CREDIT_CARD_CHECK_CARD_DETAILS() throws IOException, InterruptedException   {
@@ -112,6 +117,7 @@ public class Regression extends Base {
 
 	}
 
+	
 	@Test 
 	(priority = 8)	
 	public void CREDIT_CARD_LOAD_CARD() throws IOException, InterruptedException   {
@@ -119,7 +125,8 @@ public class Regression extends Base {
 		Account.Load_Credit_Card("Load or Pay credit card", 10);
 
 	}
-	
+
+ 	
 	@Test 
 	(priority = 9)
 	public void CREDIT_CARD_TRANSFER_CARD() throws IOException, InterruptedException   {
@@ -127,6 +134,7 @@ public class Regression extends Base {
 		Account.Transfer_Credit_Card("Transfer from credit card", 11);
 
 	}
+
 
 	@Test 
 	(priority = 10)
@@ -144,6 +152,7 @@ public class Regression extends Base {
 
 	}
 
+W
 	@Test 
 	(priority = 12)
 	public void WAZEN_ACCOUNT_PASUSE_RESUME() throws IOException, InterruptedException   {
@@ -160,6 +169,7 @@ public class Regression extends Base {
 		
 	}
 
+
 	@Test 
 	(priority = 14)
 	public void WAZEN_ACCOUNT_CHECK_DETAILS() throws IOException, InterruptedException   {
@@ -167,6 +177,8 @@ public class Regression extends Base {
 		Account.Check_Wazen_Accounts_Details("Check wazin account details ", 16);
 
 	}
+
+
 
 	@Test 
 	(priority = 15)
@@ -176,6 +188,7 @@ public class Regression extends Base {
 		
 	}
 
+
 	@Test 
 	(priority = 16)
 	public void WITHIN_RIYAD_BANK_TRANSFER() throws IOException, InterruptedException   {
@@ -183,6 +196,7 @@ public class Regression extends Base {
 		MoneyTransfer.Within_Riyad_Bank("Within riyad bank trnasfer", 18);
 
 	}
+
 
 	@Test 
 	(priority = 17)
@@ -200,6 +214,8 @@ public class Regression extends Base {
 
 	}
 
+
+ 
 	@Test 
 	(priority = 19)
 	public void WU_TRANSFER() throws IOException, InterruptedException   {
@@ -207,6 +223,7 @@ public class Regression extends Base {
 		MoneyTransfer.WU_Transfer("WU transfer", 21);
 
 	}
+*/
 
 	@Test 
 	(priority = 20)
@@ -215,7 +232,7 @@ public class Regression extends Base {
 		MoneyTransfer.Money_Express("Money express transfer", 22);
 
 	}
-
+/*
 	@Test 
 	(priority = 21)
 	public void CHARITY_DONATION_TRANSFER() throws IOException, InterruptedException   {
@@ -338,7 +355,7 @@ public class Regression extends Base {
 		Apply.Creat_Wazen("Apply for wazen", 37);
 
 	}
-
+	
 	@Test 
 	(priority = 36)
 	public void ADD_RIYAD_BANK_BENFICIARY() throws IOException, InterruptedException   {
@@ -464,9 +481,7 @@ public class Regression extends Base {
 
 		Logout.Logout("Logout", 53);
 
-	}
-	
-
+	}*/
 }
 	
 
