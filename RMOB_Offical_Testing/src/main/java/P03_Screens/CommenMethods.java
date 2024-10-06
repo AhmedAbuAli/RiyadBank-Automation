@@ -217,6 +217,8 @@ public class CommenMethods extends Base {
 		}
 	
 		try {
+
+			Thread.sleep(5000);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			driver.findElement(By.xpath(BUTTON_Continue)).click();
 		} catch (Exception e) {

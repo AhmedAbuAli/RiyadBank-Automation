@@ -18,7 +18,7 @@ public class AddNewBeneficaryScreen extends Base {
 	String INPUT = "//android.widget.EditText";
 	String BUTTON_InternationalBank = "//android.widget.Button[@index = '5']";
 	String OPTION_BenfCity = "//android.widget.TextView[@text = 'TABUK']";
-	String SELECT_BenfCity = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View[3]/android.view.View[6]/android.view.View/android.widget.Button";
+	String SELECT_BenfCity = "(//android.widget.Button[@text=''])[1]";
 	String INPUT_BenfName1 = "(//android.widget.EditText) [4]";
 	String INPUT_IBAN = "//android.widget.EditText[@text= 'SA']";
 	String BUTTON_LocalBank = "//android.widget.Button[@index = '3']";
@@ -42,6 +42,8 @@ public class AddNewBeneficaryScreen extends Base {
 	String SELECT3 = "//android.widget.TextView[@text ='']";
 	String OPTION = "(//android.widget.TextView[@index ='0']) [5]";
 	String OPTION2 = "//android.widget.TextView";
+	String Country  = "UNITED ARAB EMIRATES";
+	String Currency = "AED"; 
 	String OPTION_Relationship = "//android.widget.TextView[@text ='Family']";
 	String BUTTON_CreateBenf = "//android.widget.Button[@text ='Create Beneficiary arrow round-forward']";
 	String[] options = { "All Services", "Within Riyad Bank Beneficiary" };
@@ -79,23 +81,18 @@ public class AddNewBeneficaryScreen extends Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_NewBenf)).click();
 
+		Thread.sleep(3000);
+
 	}
 	// ============================================================================
 
 	public void Riyad_Bank_Benf(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
-			try {
 			
-				Open_New_Benf();
+			Open_New_Benf();
 
-			} catch (Exception e) {
-				
-				// DO NOTHING 
-			
-			}
-			
-			
+			Thread.sleep(5000);
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_WithinRiyadBank)).click();
 			
@@ -126,36 +123,31 @@ public class AddNewBeneficaryScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_Relationship)).click();
 		    
+			Thread.sleep(5000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
 			
+			Thread.sleep(5000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_CreateBenf)).click();
 			
 			Methods.Get_OTP();
 		    
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			
-			} catch (Exception e) {
-				
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
+
 		
 		}
 		
-		Methods.Back_To_Home_Screen();
 
 	}
 	// ============================================================================
@@ -163,17 +155,11 @@ public class AddNewBeneficaryScreen extends Base {
 	public void Local_Bank_Benf(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
-			try {
 
-				Open_New_Benf();
+			Open_New_Benf();
 
-			} catch (Exception e) {
+			Thread.sleep(5000);
 
-				// DO NOTHING
-
-			}
-			
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_LocalBank)).click();
 			
@@ -181,7 +167,12 @@ public class AddNewBeneficaryScreen extends Base {
 			driver.findElement(By.xpath(INPUT_IBAN)).click();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(INPUT_IBAN)).sendKeys("SA12 6000 0000 9236 3945 0001");
+			driver.findElement(By.xpath(INPUT_IBAN)).sendKeys("SA23 3040 0108 0889 2278 0010");
+			// SA84 1500 0425 1072 1930 0018
+			// SA12 6000 0000 9236 3945 0001
+			// SA23 3040 0108 0889 2278 0010
+			// SA80 6500 0000 1282 7292 4002
+
 			
 			driver.navigate().back();
 
@@ -200,6 +191,8 @@ public class AddNewBeneficaryScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(OPTION_Relationship)).click();
 			
+			Thread.sleep(5000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
 			
@@ -214,26 +207,16 @@ public class AddNewBeneficaryScreen extends Base {
 			Thread.sleep(10000);
 			
 			Methods.Get_OTP();
-		    
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			
-			} catch (Exception e) {
-			
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}
+		 
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-		
+			Methods.Back_To_Home_Screen();
+
 		}
 		
-		Methods.Back_To_Home_Screen();
 	
 	}
 	// ============================================================================
@@ -244,17 +227,8 @@ public class AddNewBeneficaryScreen extends Base {
 
 		    Actions actions = new Actions(driver);
 
-			try {
+			Open_New_Benf();
 
-				Open_New_Benf();
-
-			} catch (Exception e) {
-
-				// DO NOTHING 
-
-			}
-			
-			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_InternationalBank)).click();
 			
@@ -269,7 +243,8 @@ public class AddNewBeneficaryScreen extends Base {
 			Thread.sleep(5000);
 			*/
 						
-			
+			Thread.sleep(3000);
+
 			// COUNTRY SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT2+") [1]")).click();
@@ -277,12 +252,15 @@ public class AddNewBeneficaryScreen extends Base {
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(INPUT)).sendKeys("UNITED ARAB EMIRATES");
+			driver.findElement(By.xpath(INPUT)).sendKeys(Country);
 			
+			Thread.sleep(3000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(OPTION)).click();
+			driver.findElement(By.xpath(OPTION2+"[@text='" + Country +"']")).click();
 			
-		
+			Thread.sleep(3000);
+
 			// CURRENCY SELECT
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath("("+SELECT2+") [2]")).click();
@@ -290,10 +268,10 @@ public class AddNewBeneficaryScreen extends Base {
 			Thread.sleep(3000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(INPUT)).sendKeys("AED");
+			driver.findElement(By.xpath(INPUT)).sendKeys(Currency);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(OPTION)).click();
+			driver.findElement(By.xpath(OPTION2+"[@text='" + Currency +"']")).click();
 			
 			
 			// BANK NAME SELECT 
@@ -346,25 +324,17 @@ public class AddNewBeneficaryScreen extends Base {
 			
 			Methods.Get_OTP();
 			
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			
-			} catch (Exception e) {
-			
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}	
+		 
+			Methods.ChcekResult(RportName, RowNumeber);
 		
 		} catch (Exception e) {
 		
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
+
 		
 		}
 		
-		Methods.Back_To_Home_Screen();
 	}
 	// ============================================================================
 

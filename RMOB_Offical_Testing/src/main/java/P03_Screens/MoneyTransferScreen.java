@@ -163,12 +163,10 @@ public class MoneyTransferScreen extends Base {
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Transfer2)).click();
+
+			Confirm_Transfer(RportName);
+			Methods.ChcekResult(RportName, RowNumeber);
 			
-			Methods.Get_OTP();
-
-			Thread.sleep(10000);
-
-
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
@@ -456,24 +454,8 @@ public class MoneyTransferScreen extends Base {
 			driver.findElement(By.xpath(BUTTON_Transfer2)).click();
 			
 			Methods.Get_OTP();
-			
-			try {
 
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
-
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-
-				Base.Take_SscreenShot(RportName , "");	
-
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 			
@@ -491,7 +473,8 @@ public class MoneyTransferScreen extends Base {
 		try {
 
 			Open_Money_Transfer();
-			
+
+			Thread.sleep(5000);
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Zakaty)).click();
@@ -521,22 +504,7 @@ public class MoneyTransferScreen extends Base {
 			
 			Methods.Get_OTP();
 			
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-				
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-				
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-			}	
-
+			Methods.ChcekResult(RportName, RowNumeber);
 		} catch (Exception e) {
 			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
@@ -559,6 +527,8 @@ public class MoneyTransferScreen extends Base {
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_NewRequest)).click();
+
+			JOptionPane.showMessageDialog(null, "Please confirm that the account has enough balance , if not please change manually ");
 			
 			Thread.sleep(10000);
 			
@@ -620,21 +590,8 @@ public class MoneyTransferScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Confirm2)).click();
 			
-			try {
-
-				Methods.MW_PopUps();
-				
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-				
-				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-				driver.findElement(By.xpath(BUTTON_HomePage)).click();
-				Base.Take_SscreenShot(RportName , "");	
-			}	
+		
+			Methods.ChcekResult(RportName, RowNumeber);
 			
 		} catch (Exception e) {
 

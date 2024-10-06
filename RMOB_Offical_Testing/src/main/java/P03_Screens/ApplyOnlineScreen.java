@@ -2,13 +2,8 @@ package P03_Screens;
 
 import java.io.IOException;
 import java.time.Duration;
-
 import javax.swing.JOptionPane;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
-
 import P01_Base.Base;
 import P04_Utils.Data;
 import io.appium.java_client.AppiumBy;
@@ -24,7 +19,7 @@ public class ApplyOnlineScreen extends Base{
 	String INPUT_MinBalance = "(//android.widget.EditText) [4]";
 	String INPUT_TargetAmount = "(//android.widget.EditText) [3]";
 	String OPTION_GoalType = "//android.widget.TextView[@text ='Buy A Car']";
-	String SELECT_GoalType ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.Button";
+	String SELECT_GoalType ="//android.widget.Button[@text='']";
 	String INPUT_GoalPreferredName = "(//android.widget.EditText) [1]";
 	String RADIO_WithRetiurns ="//android.widget.RadioButton[@text ='With returns']";
 	String BUTTON_StartSaving ="//android.widget.Button[@text ='Start Saving Now']";
@@ -124,10 +119,12 @@ public class ApplyOnlineScreen extends Base{
 				
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.findElement(By.xpath(BUTTON_ApplyOnline)).click();
+
+		Thread.sleep(3000);
+
 			
 	}
 	// ============================================================================
-
 
 	public void Complete_Account(String RportName ) throws IOException, InterruptedException {
 		
@@ -166,7 +163,6 @@ public class ApplyOnlineScreen extends Base{
 	}
 	// ============================================================================
 
-	
 	public void Open_Account(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
@@ -200,28 +196,19 @@ public class ApplyOnlineScreen extends Base{
 				Complete_Account(RportName);
 			}
 		
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			
-			} catch (Exception e) {
-			
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			}
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
+
 		}
 
-		Methods.Back_To_Home_Screen();
 		
 	}
 	// ============================================================================
 
-	
 	public void Create_Credit_Card(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
@@ -360,7 +347,6 @@ public class ApplyOnlineScreen extends Base{
 	}
 	// ============================================================================
 
-	
 	public void Creat_Virtual_Card(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
@@ -405,7 +391,6 @@ public class ApplyOnlineScreen extends Base{
 	}
 	// ============================================================================
 
-	
 	public void Creat_Prepaid_Card(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
@@ -437,9 +422,8 @@ public class ApplyOnlineScreen extends Base{
 			
 			Thread.sleep(7000);
 			
-			Methods.action_clickOnPosition(500, 1800);
-			Methods.action_clickOnPosition(500, 1800);
-			
+			JOptionPane.showMessageDialog(null, "Please confirm that the account has enough balance , if not please change manually ");
+
 			Thread.sleep(7000);
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -450,32 +434,21 @@ public class ApplyOnlineScreen extends Base{
 			
 			Methods.Get_OTP();
 
-			Thread.sleep(30000);
+			Thread.sleep(45000);
 			
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
-			
-			} catch (Exception e) {
-			
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-		
+			Methods.Back_To_Home_Screen();
+
 		}
 
-		Methods.Back_To_Home_Screen();
 		
 	}
 	// ============================================================================
 
-	
 	public void Creat_Salary_Card(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
@@ -510,7 +483,6 @@ public class ApplyOnlineScreen extends Base{
 	}
 	// ============================================================================
 
-	
 	public void Creat_Multi_Currency_Card(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		
 		try {
@@ -552,8 +524,7 @@ public class ApplyOnlineScreen extends Base{
 			
 			Thread.sleep(5000);
 			
-			Methods.action_clickOnPosition(550, 1500);
-			Methods.action_clickOnPosition(550, 1500);
+			JOptionPane.showMessageDialog(null, "Please confirm that the account has enough balance , if not please change manually ");
 
 			Thread.sleep(5000);
 			
@@ -567,25 +538,15 @@ public class ApplyOnlineScreen extends Base{
 			
 			Methods.Get_OTP();
 
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			
-			} catch (Exception e) {
-				
-				Base.Take_SscreenShot(RportName ,  RportName + " ");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-		
+			Methods.Back_To_Home_Screen();
+
 		}
 
-		Methods.Back_To_Home_Screen();
 		
 	}
 	// ============================================================================
@@ -594,18 +555,16 @@ public class ApplyOnlineScreen extends Base{
 		
 		try {
 
-		    Actions actions = new Actions(driver);
-
 			Open_Apply_Online();
 			
-	        actions.moveToElement(driver.findElement(By.xpath(VIEW_ApplyOnlineMenu))).click().sendKeys(Keys.PAGE_DOWN).perform();
-
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_ApplyWazen)).click();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_StartSaving)).click();
 			
+			JOptionPane.showMessageDialog(null, "Please confirm that the account has enough balance , if not please change manually ");
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(RADIO_WithRetiurns)).click();
 			
@@ -632,7 +591,9 @@ public class ApplyOnlineScreen extends Base{
 		        KeyEvent keyEvent0 = new KeyEvent(AndroidKey.DIGIT_0);
 		        driver.pressKey(keyEvent0);
 			}
-			
+
+			driver.navigate().back();
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT_MinBalance)).click();
 			
@@ -642,34 +603,26 @@ public class ApplyOnlineScreen extends Base{
 			driver.navigate().back();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(BUTTON_Continue)).click();
+			driver.findElement(AppiumBy.androidUIAutomator(command5)).click();;
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(AppiumBy.androidUIAutomator(command5)).click();;
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(CHECKBOX)).click();
-			
-			try {
-				
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			
-			} catch (Exception e) {
-				
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}
+		
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+			driver.findElement(By.xpath(BUTTON_Confirm)).click();
+
+		    Methods.ChcekResult(RportName ,RowNumeber );
 
 		} catch (Exception e) {
 			
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-		
+			Methods.Back_To_Home_Screen();
+
 		}
 
-		Methods.Back_To_Home_Screen();
-		
 	}
 	// ============================================================================
 
@@ -709,6 +662,7 @@ public class ApplyOnlineScreen extends Base{
 		}
 		
 	}
+	// ============================================================================
 
 	public void Apply_Personal_Loan(String RportName , int RowNumeber) throws IOException, InterruptedException {
 		

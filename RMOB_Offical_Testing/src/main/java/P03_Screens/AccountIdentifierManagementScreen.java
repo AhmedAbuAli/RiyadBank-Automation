@@ -76,6 +76,8 @@ public class AccountIdentifierManagementScreen extends Base {
 			
 			}
 
+			Thread.sleep(5000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Account)).click();
 
@@ -114,20 +116,8 @@ public class AccountIdentifierManagementScreen extends Base {
 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Confirm)).click();
-			
-			try {
 
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
-				Methods.Back_To_Home_Screen();
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
@@ -152,6 +142,8 @@ public class AccountIdentifierManagementScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_UnlinkMyAccount)).click();
 			
+			Thread.sleep(5000);
+
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Account)).click();
 			
@@ -177,26 +169,15 @@ public class AccountIdentifierManagementScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Confirm)).click();
 			
-			try {
+			Methods.ChcekResult(RportName, RowNumeber);
 
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-			
-			} catch (Exception e) {
-			
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-			
-			}	
-		
 		} catch (Exception e) {
 		
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-		
+			Methods.Back_To_Home_Screen();
+
 		}
-		
-		Methods.Back_To_Home_Screen();
-		
+				
 	}
 	// ============================================================================
 

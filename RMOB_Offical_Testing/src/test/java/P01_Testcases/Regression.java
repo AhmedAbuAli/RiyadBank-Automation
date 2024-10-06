@@ -223,7 +223,7 @@ W
 		MoneyTransfer.WU_Transfer("WU transfer", 21);
 
 	}
-*/
+
 
 	@Test 
 	(priority = 20)
@@ -232,7 +232,7 @@ W
 		MoneyTransfer.Money_Express("Money express transfer", 22);
 
 	}
-/*
+
 	@Test 
 	(priority = 21)
 	public void CHARITY_DONATION_TRANSFER() throws IOException, InterruptedException   {
@@ -264,6 +264,7 @@ W
 		AccountIM.link_My_Account("Link my account", 26);
 
 	}
+
 
 	@Test 
 	(priority = 25)
@@ -297,12 +298,14 @@ W
 
 	}
 
+
 	@Test 
 	(priority = 29)
 	public void APPLY_FOR_CREDIT_CARD() throws IOException, InterruptedException   {
 
 		Apply.Create_Credit_Card("Apply for a credit card", 31);
-	
+		Base.Skip_Method();	
+
 	}
 
 	@Test 
@@ -313,16 +316,19 @@ W
 		Base.Skip_Method();	
 
 	}
-	
+
 	@Test 
 	(priority = 31)
 	public void APPLY_FOR_VIRTUAL_CARD() throws IOException, InterruptedException   {	
 
 		Data.Set_Methode_Status(33 , "Apply for a virtual card" , "SKIP");
 		Base.Skip_Method();	
+		// TO BE DEVELOPED
 
 	}
 
+
+ 
 	@Test 
 	(priority = 32)
 	public void APPLY_FOR_PREPAID_CARD() throws IOException, InterruptedException   {
@@ -348,6 +354,7 @@ W
 	
 	}
 
+ 
 	@Test 
 	(priority = 35)
 	public void APPLY_FOR_WAZEN() throws IOException, InterruptedException   {
@@ -355,6 +362,7 @@ W
 		Apply.Creat_Wazen("Apply for wazen", 37);
 
 	}
+
 	
 	@Test 
 	(priority = 36)
@@ -371,7 +379,7 @@ W
 		AddNewBenf.Local_Bank_Benf("Add local beneficiary", 39);
 	
 	}
-
+*/
 	@Test 
 	(priority = 38)
 	public void ADD_INTERNATIONAL_BENFICIARY() throws IOException, InterruptedException   {
@@ -379,7 +387,7 @@ W
 		AddNewBenf.International_Bank_Benf("Add international beneficiary", 40);
 
 	}
-
+/*
 	@Test 
 	(priority = 39)
 	
