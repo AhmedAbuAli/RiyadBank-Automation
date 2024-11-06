@@ -1,7 +1,6 @@
 package P03_Screens;
 
 import java.io.IOException;
-import java.sql.Driver;
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
