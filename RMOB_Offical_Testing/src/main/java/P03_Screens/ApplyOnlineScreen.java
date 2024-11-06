@@ -641,23 +641,21 @@ public class ApplyOnlineScreen extends Base{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_BuyNow)).click();
 			
+
 			Thread.sleep(3000);
+
+			Methods.MW_PopUps();
 			
-			try {
+			Thread.sleep(3000);
 
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			driver.navigate().back();
 
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
 
 		}
 		

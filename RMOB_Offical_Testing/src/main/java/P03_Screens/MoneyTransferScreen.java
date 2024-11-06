@@ -164,7 +164,8 @@ public class MoneyTransferScreen extends Base {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Transfer2)).click();
 
-			Confirm_Transfer(RportName);
+			Methods.Get_OTP();
+			//Confirm_Transfer(RportName);
 			Methods.ChcekResult(RportName, RowNumeber);
 			
 		} catch (Exception e) {

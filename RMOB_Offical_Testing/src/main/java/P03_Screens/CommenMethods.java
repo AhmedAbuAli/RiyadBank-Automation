@@ -319,7 +319,23 @@ public class CommenMethods extends Base {
 
 		} 
 	
-	}
+	public void sendKeyEvents(String input) {
+    // Assuming keyEvent0 to keyEvent9 are defined
+    KeyEvent[] keyEvents = {keyEvent0, keyEvent1, keyEvent2, keyEvent3, keyEvent4, keyEvent5, keyEvent6, keyEvent7, keyEvent8, keyEvent9};
+
+    // Iterate through each character in the input string
+    for (char ch : input.toCharArray()) {
+        int index = Character.getNumericValue(ch); // Convert char to an integer
+
+        // Check if the character is a valid digit
+        if (index >= 0 && index <= 9) {
+            driver.pressKey(keyEvents[index]); // Press the corresponding key event
+        } else {
+            System.out.println("Invalid input: " + ch); // Handle invalid input if necessary
+        }
+    }
+  }
+}
 
 
 	

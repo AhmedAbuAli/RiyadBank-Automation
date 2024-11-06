@@ -751,15 +751,7 @@ public class AccountCardsScreen extends Base {
 		
 		try {
 
-			try {
-
-				Open_Dedit_Card();
-
-			} catch (Exception e) {
-			
-				// DO NOTHING
-
-			}
+			Open_Dedit_Card();
 			
 	        JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO CHECK THEN PRESS OK");
 	        
@@ -771,32 +763,20 @@ public class AccountCardsScreen extends Base {
 			
 			Methods.Get_OTP();
 	        
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
 
 		}
 
-		Methods.Back_To_Home_Screen();
-		
 	}
 	// ============================================================================
 	
 	 
 	// CREDIT CARD ================================================================ 
-	
 	public void Open_Credit_Card() throws IOException, InterruptedException {
 		
 		Thread.sleep(6000);
@@ -989,17 +969,7 @@ public class AccountCardsScreen extends Base {
 		
 	try {
 			
-		try {
-
-			Open_Credit_Card();
-
-		} catch (Exception e) {
-
-			// DO NOTHING
-		
-		}
-		
-		Base.Take_SscreenShot(RportName, RportName + "TEST START");
+		Open_Credit_Card();
 		
         JOptionPane.showMessageDialog(null, "SLIDE MANUALLY TO THE CARD YOU WANT TO CHECK THEN PRESS OK");
 		
@@ -1022,25 +992,14 @@ public class AccountCardsScreen extends Base {
 		
 		Thread.sleep(5000);
 		
-		try {
-
-			Methods.MW_PopUps();
-			Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
-
-		} catch (Exception e) {
-
-			Base.Take_SscreenShot(RportName ,  RportName + "");
-			Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-
-		}			
+		Methods.ChcekResult(RportName, RowNumeber);		
 
 	} catch (Exception e) {
 
 		Data.Set_Methode_Status( RowNumeber , RportName , "FAIL" );
+		Methods.Back_To_Home_Screen();
 
 	}
-
-	Methods.Back_To_Home_Screen();
 
 }
 	// ============================================================================

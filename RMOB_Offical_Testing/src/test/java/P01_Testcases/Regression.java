@@ -55,7 +55,7 @@ public class Regression extends Base {
 	// REPORT ROW NUMBER START FROM 3 
     // ROW NUMBER  = PRIORITY + 2
 	
-/* 
+	/* 
 	@Test 
 	(priority = 1)
 	public void LOGIN() throws IOException, InterruptedException   {
@@ -152,7 +152,7 @@ public class Regression extends Base {
 
 	}
 
-W
+
 	@Test 
 	(priority = 12)
 	public void WAZEN_ACCOUNT_PASUSE_RESUME() throws IOException, InterruptedException   {
@@ -256,7 +256,7 @@ W
 		MoneyTransfer.Request_To_Pay("request to pay transfer", 25);
 
 	}
-
+    /* 
 	@Test 
 	(priority = 24)
 	public void LINK_MY_ACCOUNT() throws IOException, InterruptedException   {
@@ -273,7 +273,7 @@ W
 		AccountIM.UnLink_My_Account("Unlink my account", 27);
 
 	}
-
+	
 	@Test 
 	(priority = 26)
 	public void OPEN_CURRENT_ACCOUNT() throws IOException, InterruptedException   {
@@ -363,7 +363,7 @@ W
 
 	}
 
-	
+	*/
 	@Test 
 	(priority = 36)
 	public void ADD_RIYAD_BANK_BENFICIARY() throws IOException, InterruptedException   {
@@ -379,7 +379,7 @@ W
 		AddNewBenf.Local_Bank_Benf("Add local beneficiary", 39);
 	
 	}
-*/
+
 	@Test 
 	(priority = 38)
 	public void ADD_INTERNATIONAL_BENFICIARY() throws IOException, InterruptedException   {
@@ -387,7 +387,7 @@ W
 		AddNewBenf.International_Bank_Benf("Add international beneficiary", 40);
 
 	}
-/*
+
 	@Test 
 	(priority = 39)
 	
@@ -409,7 +409,7 @@ W
 	(priority = 41)
 	public void DEBIT_CARD_STOP_CARD() throws IOException, InterruptedException   {
 		
-		Account.Stop_Temporary("Stop credit card", 43);
+		Account.Stop_Temporary("Stop debit card", 43);
 	
 	}
 
@@ -420,7 +420,7 @@ W
 		PMF.PFM_Check_Activity("Check personal finance mangement details", 44);
 
 	}
-	
+
 	@Test 
 	(priority = 43)
 	public void INSURANCE_CHECK_MOTOR_INSURANCE_DETAILS() throws IOException, InterruptedException   {
@@ -445,13 +445,6 @@ W
 
 	}
 
-	@Test
-	(priority = 46)
-	public void HASSAD_PROGRAM_TRANSFER() throws IOException, InterruptedException {
-	
-		Hassad.Hassad_Transfer("Transfer hassad points", 48); //  NOT COMPLETED YET 
-	
-	}
 
 	@Test
 	(priority = 47)
@@ -467,6 +460,10 @@ W
 		BillsGovermentPayment.Pay_Bill("Pay a bill", 50);
 	}
 
+
+
+	// TO BE REPLACED WITH ( REACTIVE CREDIT CARD)
+		/* 
 	@Test 
 	(priority = 49)
 	public void APPLY_FOR_PERSONAL_LOAN() throws IOException, InterruptedException   {
@@ -474,14 +471,7 @@ W
 		Apply.Apply_Personal_Loan("Apply for personal loan ",51 );
 
 	}
-
-	@Test 
-	(priority = 50)
-	public void REFINANCE() throws IOException, InterruptedException   {
-
-		Account.Refinance("Refinance", 52);
-	
-	}
+	// TO BE REPLACED WITH ( REACTIVE DEBIT CARD )
 
 	@Test
 	(priority = 51)
@@ -489,7 +479,8 @@ W
 
 		Logout.Logout("Logout", 53);
 
-	}*/
+	}
+		*/
 }
 	
 

@@ -1,10 +1,7 @@
 package P03_Screens;
-
 import java.io.IOException;
 import java.time.Duration;
-
 import org.openqa.selenium.By;
-
 import P01_Base.Base;
 import P04_Utils.Data;
 
@@ -39,15 +36,7 @@ public class PersonalFinanceManagementScreen extends Base{
 		
 		try {
 
-			try {
-
-				Open_PFM();
-
-			} catch (Exception e) {
-
-				// DO NOTHING 
-
-			}
+			Open_PFM();
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Expenses)).click();
@@ -61,26 +50,15 @@ public class PersonalFinanceManagementScreen extends Base{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath( BUTTON_ViewMore)).click();
 			
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "" );
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-
-			}	
+			Methods.ChcekResult(RportName, RowNumeber);
 
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
 
 		}
 
-		Methods.Back_To_Home_Screen();
-		
 	}
 	// ============================================================================
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="RMOB">
+
+	<listeners>
+		<listener class-name="P02_Listeners.TestListeners"></listener>
+	</listeners>
+	
+	<test thread-count="5" name="Android">
+		<parameter name="deviceName" value="AhmedM"></parameter>
+	    <parameter name="platformName" value="Android"></parameter>
+		<parameter name="platformVersion" value="13"></parameter>	
+	  
+	 	<classes>     
+	 		<class name="P01_Testcases.Tasks"></class> 
+	 		<!-- <class name="P01_Testcases.Regression"></class>--> 
+	 	</classes>
+	</test> 
+	 	
+</suite>
+
+	

@@ -89,13 +89,6 @@ public class InvestmentScreen extends Base{
 			
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Arrow)).click();
-			
-			/* 
-			String Selected_Option = Methods.Choose_List(Companies, "Company", "Please select a company to continue ");
-			
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath("//android.widget.TextView[@text = '"+Selected_Option+"']")).click();
-			*/
 
 			Thread.sleep(10000);
 
@@ -111,10 +104,6 @@ public class InvestmentScreen extends Base{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Save)).click();
 
-			/* 
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-			driver.findElement(By.xpath(INPUT)).click();
-		*/
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(INPUT)).sendKeys("10");
 			
@@ -139,25 +128,16 @@ public class InvestmentScreen extends Base{
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 			driver.findElement(By.xpath(BUTTON_Accept)).click();
 			
-			try {
-
-				Methods.MW_PopUps();
-				Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
-
-			} catch (Exception e) {
-
-				Base.Take_SscreenShot(RportName ,  RportName + "");
-				Data.Set_Methode_Status( RowNumeber , RportName , "PASS" );
-
-			}	
-
+			Methods.ChcekResult(RportName, RowNumeber);
+			
 		} catch (Exception e) {
 
 			Data.Set_Methode_Status( RowNumeber , RportName , " FAIL " );
+			Methods.Back_To_Home_Screen();
+
 
 		}
 
-		Methods.Back_To_Home_Screen();
 		
 	}
 	// ============================================================================
